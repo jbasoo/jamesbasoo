@@ -11,10 +11,8 @@
   --box-shadow-y-pos: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
   --box-shadow-y-neg: 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
   
+  --grid-overspill: 15%;
   --grid-line-color: var(--c-gray-200);
   --grid-line-thickness: .063rem;
   --grid-size: 2rem;
-  /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
-  --grid-mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
-  /* --mask:  conic-gradient(from 0 at 50% 0%, transparent, black, transparent); */
 }
