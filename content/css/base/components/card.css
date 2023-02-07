@@ -1,0 +1,14 @@
+.card {
+	background: white;
+	padding: 1.2rem;
+	border-radius: 0.2rem;
+	box-shadow: var(--box-shadow-y-pos);
+	
+	& > *:first-child {
+		margin-top: 0;
+	}
+	
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}

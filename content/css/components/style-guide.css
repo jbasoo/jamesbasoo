@@ -1,0 +1,36 @@
+.style-guide {
+	& main {
+		margin-inline: auto;
+		width: min(calc(100dvw - 4rem), $bp_xl);
+	}
+	
+	& .colors {
+		width: 100%;
+		border-collapse: collapse;
+		table-layout: fixed;
+		
+		& th,
+		& td {
+			padding: 0;
+		}
+	}
+	
+	& .variant-name,
+	& .family-name {
+		& div {
+			aspect-ratio: 1/1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0.2rem;
+		}
+	}
+	
+	& .color {
+		&:before {
+			content: "";
+			display: block;
+			aspect-ratio: 1/1;
+		}
+	}
+}

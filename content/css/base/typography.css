@@ -1,0 +1,25 @@
+body {
+  /* font-family: 'Fira Sans Condensed', sans-serif; */
+	font-family: 'Overpass', sans-serif;
+	color: var(--c-gray-700);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	/* font-family: 'Fira Sans Extra Condensed', sans-serif; */
+	/* font-style: italic; */
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+a {
+	color: var(--c-blue-500);
+	transition: color var(--transition-duration);
+	
+	&:hover {
+		color: var(--c-blue-300);
+	}
+}

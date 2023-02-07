@@ -6,6 +6,9 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const pluginPostCss = require("eleventy-plugin-postcss");
+const postcss = require("postcss");
+const postcssNesting = require("postcss-nesting");
 
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
@@ -20,6 +23,9 @@ module.exports = function(eleventyConfig) {
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+	
+	// Custom plugins
+	eleventyConfig.addPlugin(pluginPostCss);
 
 	// App plugins
 	eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
@@ -88,6 +94,10 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+	
+	eleventyConfig.setServerOptions({
+    port: 8113
+  });
 
 	// Features to make your build faster (when you need them)
 

@@ -1,0 +1,13 @@
+@import url('color.css') layer(color);
+@import url('typography.css') layer(typography);
+
+:root {
+  --transition-duration: 0.2s;
+	
+	--mark-size: min(1.5rem, 6dvw);
+  --mark-circle-size: calc(var(--mark-size) * 0.666666666);
+  --mark-circle-offset: calc(var(--mark-size) / 2 * 0.33333333);
+  
+  --box-shadow-y-pos: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
+  --box-shadow-y-neg: 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
+}

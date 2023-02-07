@@ -1,0 +1,7 @@
+@layer reset, vendor, variables, base, components, utilities, overrides;
+
+@import url('reset.css') layer(reset);
+@import url('variables/all.css') layer(variables);
+@import url('base/all.css') layer(base);
+@import url('components/all.css') layer(components.all);
+@import url('utilities.css') layer(utilities);

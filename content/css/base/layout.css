@@ -1,0 +1,8 @@
+body {
+  background-color: var(--c-page-background);
+}
+
+.intro {
+  margin-inline: auto;
+	width: min(calc(100% - 2rem), 1200px);
+}

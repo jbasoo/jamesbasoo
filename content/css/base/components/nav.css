@@ -1,0 +1,70 @@
+.nav--main {
+	width: max-content;
+	margin-inline: auto;
+	margin-block: 2.35rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 0.4rem;
+	/* column-gap: 1.2rem; */
+	/* will-change: transform; */
+	font-size: var(--font-size--lg);
+	
+	& a {
+		display: flex;
+		align-items: center;
+		/* font-style: italic; */
+		text-decoration: none;
+		color: var(--c-gray-700);
+		padding-inline: .6rem;
+		
+		&:hover {
+			color: var(--c-gray-900);
+		}
+	}
+	
+	&:hover a:not(:hover) {
+		color: var(--c-gray-500);
+	}
+	
+	/* @media (width < 768px) {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background: white;
+		box-shadow: var(--box-shadow-y-neg);
+		text-transform: uppercase;
+		padding: 0;
+		gap: 0;
+		
+		& a {
+			flex-grow: 1;
+			padding: 0.5rem;
+			color: black;
+			font-weight: bold;
+			font-size: 0.8rem;
+			border-inline: 0.5px solid hsl(45deg 10% 95%);
+			
+			&:first-child { border-left: 0; }
+			&:last-child { border-right: 0; }
+			
+			@TODO: find unrestricted icons
+			& .icon {
+				width: 24px;
+				height: 18px;
+				object-fit: cover;
+				object-position: top center;
+				margin-bottom: 0.2rem;
+			}
+		}
+	}
+	
+	@media (width >= 768px) {
+		& a {			
+			& .icon {
+				display: none;
+			}
+		}
+	} */
+}

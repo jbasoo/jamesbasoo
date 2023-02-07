@@ -1,0 +1,30 @@
+.header--main {
+  --grid-line-color: var(--c-gray-200);
+  --grid-line-thickness: .063rem;
+  --grid-size: 2rem;
+  --mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
+  
+  position: relative;
+  padding: 2rem 1rem 0;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25dvh;
+    background-image:
+      linear-gradient(var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness)),
+      linear-gradient(90deg, var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness))
+    ;
+    background-size:
+      var(--grid-size) var(--grid-size),
+      var(--grid-size) var(--grid-size)
+    ;
+    background-position: center calc(0% - var(--grid-line-thickness));
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
+  }
+}
