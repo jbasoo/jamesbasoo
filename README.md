@@ -27,6 +27,7 @@ A starter repository showing how to build a blog with the [Eleventy](https://www
 	- Includes [`decoding="async"`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding)
 	- Images can be co-located with blog post files.
 	- View the [Image plugin source code](https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.images.js)
+- Per page CSS bundles [via `eleventy-plugin-bundle`](https://github.com/11ty/eleventy-plugin-bundle).
 - Built-in [syntax highlighter](https://www.11ty.dev/docs/plugins/syntaxhighlight/) (zero-JavaScript output).
 - Blog Posts
 	- Draft posts: use `draft: true` to mark a blog post as a draft. Drafts are **only** included during `--serve`/`--watch` and are excluded from full builds. View the [Drafts plugin source code](https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.drafts.js).
@@ -76,7 +77,7 @@ Specifically have a look at `eleventy.config.js` to see if you want to configure
 npm install
 ```
 
-### 4. Edit `_data/metadata.json`
+### 4. Edit `_data/metadata.js`
 
 ### 5. Run Eleventy
 
