@@ -1,5 +1,4 @@
 @import url('layout.css') layer(layout);
 @import url('typography.css') layer(typography);
-@import url('/node_modules/@fontsource/overpass/latin.css') layer(typography);
-@import url('/node_modules/@fontsource/overpass-mono/latin.css') layer(typography);
-/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;1,100&display=swap') layer(typography); */
+@import url('/fonts/fontsource/overpass/latin.css') layer(typography);
+@import url('/fonts/fontsource/overpass-mono/latin.css') layer(typography);

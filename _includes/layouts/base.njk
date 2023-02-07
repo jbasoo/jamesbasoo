@@ -22,30 +22,42 @@
 		#}
 
 		{#- Add an arbitrary string to the bundle #}
-		{%- css %}* { box-sizing: border-box; }{% endcss %}
+		{# {%- css %}* { box-sizing: border-box; }{% endcss %} #}
 		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{# {%- css %}{% include "public/css/index.css" %}{% endcss %} #}
 		<link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 		{#- Or add from node_modules #}
 		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
 		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
-		<style>{% getBundle "css" %}</style>
+		{# <style>{% getBundle "css" %}</style> #}
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
+		<header class="header--main">
+			{% include 'components/logo.njk' %}
+			
+			<nav class="nav--main">
 				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
+				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+				<ul>
+					{%- for entry in collections.all | eleventyNavigation %}
+						<li><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					{%- endfor %}
 				</ul>
+				{# <a href="/blog">
+					<!-- <img src="/img/noun-pencil-5441863.svg" alt="" class="icon"> -->
+					<span class="label">Blog</span>
+				</a>
+				<a href="/about">
+					<!-- <img src="/img/noun-person-5441852.svg" alt="" class="icon"> -->
+					<span class="label">About</span>
+				</a>
+				<a href="/contact">
+					<!-- <img src="/img/noun-comment-5441858.svg" alt="" class="icon"> -->
+					<span class="label">Contact</span>
+				</a> #}
 			</nav>
 		</header>
 
