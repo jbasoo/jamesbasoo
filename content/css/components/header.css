@@ -1,38 +1,6 @@
 .header--main {
-  --grid-line-color: var(--c-gray-200);
-  --grid-line-thickness: .063rem;
-  --grid-size: 2rem;
-  /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
-  --mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
-  /* --mask:  conic-gradient(from 0 at 50% 0%, transparent, black, transparent); */
-  
   position: relative;
   padding: 2rem 1rem 0;
-  
-  &:before {
-    /* @TODO: fix x scroll maybe by wrapping and adding overflow: hidden */
-    --overspill: 15%;
-    
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: calc(var(--overspill) * -1);
-    width: calc((var(--overspill) * 2) + 100%);
-    height: 25dvh;
-    background-image:
-      linear-gradient(var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness)),
-      linear-gradient(90deg, var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness))
-    ;
-    background-size:
-      var(--grid-size) var(--grid-size),
-      var(--grid-size) var(--grid-size)
-    ;
-    background-position: center calc(0% - var(--grid-line-thickness));
-    -webkit-mask-image: var(--mask);
-    mask-image: var(--mask);
-    /* animation: 1s alternate infinite overspillPulse; */
-  }
 }
 
 /* @keyframes overspillPulse {
