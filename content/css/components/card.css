@@ -1,14 +1,72 @@
 .card {
 	background: white;
-	padding: 1.2rem;
 	border-radius: 0.2rem;
 	box-shadow: var(--box-shadow-y-pos);
+	overflow: hidden;
+	container-type: inline-size;
+	transition: box-shadow var(--transition-duration);
 	
-	& > *:first-child {
-		margin-top: 0;
+	&:hover {
+		box-shadow: var(--box-shadow-y-pos--dark);
 	}
 	
-	& > *:last-child {
-		margin-bottom: 0;
+	html.dark & {
+		background: var(--c-gray-700);
+	}
+}
+
+.card__layout {
+	color: inherit;
+	text-decoration: initial;
+}
+
+.card__header {
+	/* background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400)); */
+	/* background-image: radial-gradient(ellipse at 0% center, var(--c-red-400) 0, var(--c-blue-400) 120%); */
+	/* background-position: center -50%;
+	background-size: auto 400%; */
+	container-type: inline-size;
+	display: grid;
+	grid-template-columns: 3rem auto;
+	/* box-shadow: inset 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2); */
+}
+
+.card__header-icon {
+	display: grid;
+	place-items: center;
+	color: white;
+	background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400));
+	font-family: var(--font-family--mono);
+	
+	html.dark & {
+		background-image: linear-gradient(to bottom right, var(--c-red-400), var(--c-yellow-400));
+	}
+}
+
+.card__header-text {
+	padding: 1.2rem;
+	color: black;
+	background-image: linear-gradient(to bottom right, var(--c-green-100), var(--c-blue-100));
+	
+	html.dark & {
+		background-image: none;
+		background-color: var(--c-gray-800);
+		color: white;
+	}
+	
+	* { margin: 0; }
+	
+	* + * {
+		margin-top: 0.2rem;
+	}
+}
+
+.card__body {
+	padding: 1.2rem;
+	
+	* { margin: 0; }
+	
+	* + * {
+		margin-top: 0.2rem;
 	}
 }

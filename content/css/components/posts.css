@@ -1,14 +1,26 @@
-.posts {
+.postlist {
 	display: grid;
 	gap: 1rem;
-	margin-inline: auto;
-	width: min(calc(100% - 2rem), 1200px);
+	margin: 0;
+	padding: 0;
+	/* width: min(calc(100% - 2rem), 1200px); */
+	list-style: none;
 	
-	@media (width >= 480px) {
+	@container (width >= 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	
-	@media (width >= 768px) {
-		grid-template-columns: repeat(3, 1fr);
+	@container (width >= 1200px) {
+		grid-template-columns: repeat(4, 1fr);
 	}
+}
+
+.postlist-item__title {
+	/* text-transform: uppercase; */
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.postlist-item__date {
+	display: block;
 }

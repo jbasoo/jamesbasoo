@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
+<html lang="{{ metadata.language }}" class="dark">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,18 +47,6 @@
 						<li><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 					{%- endfor %}
 				</ul>
-				{# <a href="/blog">
-					<!-- <img src="/img/noun-pencil-5441863.svg" alt="" class="icon"> -->
-					<span class="label">Blog</span>
-				</a>
-				<a href="/about">
-					<!-- <img src="/img/noun-person-5441852.svg" alt="" class="icon"> -->
-					<span class="label">About</span>
-				</a>
-				<a href="/contact">
-					<!-- <img src="/img/noun-comment-5441858.svg" alt="" class="icon"> -->
-					<span class="label">Contact</span>
-				</a> #}
 			</nav>
 		</header>
 

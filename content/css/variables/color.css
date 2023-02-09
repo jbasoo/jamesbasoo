@@ -24,7 +24,8 @@
   --c-yellow-300: hsl(50, 97%, 70%);
   --c-yellow-400: hsl(45, 96%, 60%);
   --c-yellow-500: hsl(40, 92%, 54%);
-  --c-yellow-600: hsl(35, 95%, 40%);
+  /* --c-yellow-600: hsl(35, 95%, 40%); */
+  --c-yellow-600: hsl(38, 95%, 40%);
   --c-yellow-700: hsl(30, 90%, 30%);
   --c-yellow-800: hsl(25, 83%, 20%);
   --c-yellow-900: hsl(20, 77%, 9%);
@@ -48,8 +49,6 @@
   --c-blue-700: hsl(204, 88%, 30%);
   --c-blue-800: hsl(208, 86%, 20%);
   --c-blue-900: hsl(212, 84%, 7%);
-
-  --c-page-background: var(--c-gray-100);
   
   /* --c-brown-100: hsl(40, 20%, 96%);
   --c-brown-200: hsl(40, 14%, 90%);

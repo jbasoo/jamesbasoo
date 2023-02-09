@@ -9,10 +9,25 @@
   --mark-circle-offset: calc(var(--mark-size) / 2 * 0.33333333);
   
   --box-shadow-y-pos: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
+  --box-shadow-y-pos--dark: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.4);
   --box-shadow-y-neg: 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
   
   --grid-overspill: 15%;
-  --grid-line-color: var(--c-gray-200);
+  --grid-line-color: var(--c-blue-200);
   --grid-line-thickness: .063rem;
   --grid-size: 2rem;
+  
+  --c-foreground--theme-light: var(--c-gray-700);
+  --c-background--theme-light: var(--c-gray-100);
+  --c-foreground--theme-dark: var(--c-gray-100);
+  --c-background--theme-dark: var(--c-gray-900);
+  
+  --c-page-background: var(--c-background--theme-light);
+  --c-text: var(--c-foreground--theme-light);
+}
+
+.dark {
+  --c-page-background: var(--c-background--theme-dark);
+  --c-text: var(--c-foreground--theme-dark);
+  --grid-line-color: var(--c-yellow-600);
 }

@@ -26,28 +26,77 @@ body {
       var(--grid-size) var(--grid-size),
       var(--grid-size) var(--grid-size)
     ;
-    background-position: center calc(0% - var(--grid-line-thickness));
+    
     -webkit-mask-image: var(--grid-mask);
     mask-image: var(--grid-mask);
   }
   
   &:before {
-    top: 0;
     /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
     --grid-mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
+    
+    top: 0;
+    background-position: center calc(0% - var(--grid-line-thickness));
   }
   
   &:after {
-    bottom: 0;
     /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
     --grid-mask: radial-gradient(ellipse at center bottom, black 0, transparent 70%);
     
-    /* @TODO: align grid gradient to bottom */
-    /* background-position: center something; */
+    bottom: 0;
+    background-position: center calc(100% + var(--grid-line-thickness));
+  }
+}
+
+.container {
+  container-type: size;
+}
+
+.layout--2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-inline: auto;
+  width: min(calc(100dvw - 4rem), $bp_xl);
+  
+  @media (width >= 1200px) {
+    grid-template-columns: 8fr 4fr;
+	}
+}
+
+.main {
+  > * + * {
+    margin-top: 1rem;
   }
 }
 
 .intro {
-  margin-inline: auto;
-	width: min(calc(100% - 2rem), 1200px);
+  h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    & .start {
+      font-size: 6rem;
+      line-height: 1;
+    }
+    
+    & .end {
+      flex-grow: 1;
+      position: relative;
+      top: -.18em;
+      font-size: 2.14rem;
+    }
+  }
+}
+
+.highlight.mask.sunset {
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400));
+  
+  html.dark & {
+    background-image: linear-gradient(to bottom right, var(--c-red-400), var(--c-yellow-400));
+  }
 }

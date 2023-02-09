@@ -3,21 +3,36 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 3
+numberOfLatestPostsToShow: 4
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-{# <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1> #}
-<h1>Hi, I'm James. I make web stuff.</h1>
-
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
+<div class="layout--2col">
+	<div class="main">
+		<div class="intro">
+			<h1>
+				<span class="start highlight mask sunset">Hi!</span>
+				<div class="end">
+					I'm James.<br>I make web stuff.
+				</div>
+			</h1>
+		</div>
+	</div>
+	<div class="sidebar posts">
+		<div class="container">
+			{% include "postslist.njk" %}
+			
+			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+			{% if morePosts > 0 %}
+				<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
 
 {# List every content page in the project #}
 {#

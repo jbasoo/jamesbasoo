@@ -17,7 +17,7 @@
 		align-items: center;
 		/* font-style: italic; */
 		text-decoration: none;
-		color: var(--c-gray-700);
+		color: var(--c-text);
 		padding-inline: .6rem;
 		
 		&:hover {
