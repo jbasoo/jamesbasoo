@@ -6,11 +6,11 @@
 				<div class="card__header-icon">{}</div>
 				<div class="card__header-text">
 					<p class="postlist-item__title">{{ post.data.title }}</p>
-					<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
 				</div>
 			</div>
 			<div class="card__body">
-				{{ post.data.description }}
+				<div>{{ post.data.description }}</div>
+				<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
 			</div>
 		</a>
 	</li>

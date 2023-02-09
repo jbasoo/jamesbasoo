@@ -23,4 +23,6 @@
 
 .postlist-item__date {
 	display: block;
+	color: var(--c-gray-500);
+	font-size: var(--font-size--sm);
 }

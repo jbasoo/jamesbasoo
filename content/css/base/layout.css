@@ -1,6 +1,7 @@
 body {
   background-color: var(--c-page-background);
   position: relative;
+  transition: color var(--transition-duration), background-color var(--transition-duration);
 }
 
 .page-bg {
