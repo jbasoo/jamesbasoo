@@ -37,6 +37,7 @@
 	color: white;
 	background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400));
 	font-family: var(--font-family--mono);
+	font-weight: bold;
 	
 	html.dark & {
 		background-image: linear-gradient(to bottom right, var(--c-red-400), var(--c-yellow-400));
