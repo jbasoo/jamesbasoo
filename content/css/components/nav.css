@@ -1,8 +1,7 @@
 .nav--main ul {
 	list-style: none;
 	width: fit-content;
-	margin-inline: auto;
-	margin-block: 2.35rem;
+	margin: 2.35rem auto calc(.1250rem);
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;

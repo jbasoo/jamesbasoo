@@ -14,7 +14,7 @@
   
   --grid-overspill: 15%;
   --grid-line-color: var(--c-blue-200);
-  --grid-line-thickness: .063rem;
+  --grid-line-thickness: .0625rem;
   --grid-size: 2rem;
   
   --c-foreground--theme-light: var(--c-gray-700);
@@ -26,8 +26,8 @@
   --c-text: var(--c-foreground--theme-light);
 }
 
-.dark {
+[data-theme="dark"] {
   --c-page-background: var(--c-background--theme-dark);
   --c-text: var(--c-foreground--theme-dark);
-  --grid-line-color: var(--c-yellow-600);
+  --grid-line-color: var(--c-yellow-700);
 }

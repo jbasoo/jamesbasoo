@@ -1,4 +1,10 @@
 .header--main {
   position: relative;
-  padding: 2rem 1rem 0;
+  padding: 2rem 1rem 1rem;
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }

@@ -11,6 +11,15 @@
   transition: color var(--transition-duration), background var(--transition-duration);
 	text-decoration: none;
   
+  [data-theme="dark"] & {
+		/* color: var(--c-gray-200); */
+    
+    &:hover {
+      /* @TODO: find nicer hover color */
+      color: var(--c-yellow-300);
+    }
+	}
+  
   &:hover {
     color: var(--c-gray-900);
     

@@ -1,4 +1,4 @@
-@import url('style-guide.css') layer(style-guide);
+@import url('design-system.css') layer(design-system);
 @import url('header.css') layer(header);
 @import url('logo.css') layer(header);
 @import url('nav.css') layer(nav);
