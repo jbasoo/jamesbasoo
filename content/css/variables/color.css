@@ -26,9 +26,9 @@
   --c-yellow-500: hsl(40, 92%, 54%);
   /* --c-yellow-600: hsl(35, 95%, 40%); */
   --c-yellow-600: hsl(40, 95%, 40%);
-  --c-yellow-700: hsl(35, 90%, 30%);
-  --c-yellow-800: hsl(30, 83%, 20%);
-  --c-yellow-900: hsl(25, 77%, 9%);
+  --c-yellow-700: hsl(40, 90%, 30%);
+  --c-yellow-800: hsl(35, 83%, 20%);
+  --c-yellow-900: hsl(35, 77%, 9%);
     
   --c-green-100: hsl(136, 100%, 97%);
   --c-green-200: hsl(136, 100%, 90%);
@@ -59,4 +59,19 @@
   --c-brown-700: hsl(32, 16%, 35%);
   --c-brown-800: hsl(28, 13%, 26%);
   --c-brown-900: hsl(24, 13%, 10%); */
+  --c-accent-light: var(--c-blue-200);
+  --c-accent: var(--c-blue-300);
+  --c-accent-dark: var(--c-blue-400);
+  
+  &[data-theme="holodeck"] {
+    --c-accent-light: var(--c-yellow-200);
+    --c-accent: var(--c-yellow-300);
+    --c-accent-dark: var(--c-yellow-400);
+  }
+  
+  &[data-theme="neo"] {
+    --c-accent-light: var(--c-green-200);
+    --c-accent: var(--c-green-300);
+    --c-accent-dark: var(--c-green-400);
+  }
 }

@@ -1,12 +1,14 @@
 .nav--main ul {
 	list-style: none;
 	width: fit-content;
-	margin: 2.35rem auto calc(.1250rem);
+	margin: 0 auto 0.1250rem;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 	row-gap: 0.4rem;
+	min-height: var(--grid-size);
 	/* column-gap: 1.2rem; */
 	/* will-change: transform; */
 	font-size: var(--font-size--lg);

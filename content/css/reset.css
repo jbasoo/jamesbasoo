@@ -1,3 +1,9 @@
+/* 0. Custom unsets. @TODO: move to different file?  */
+
+:where(.button) {
+  all: unset;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */

@@ -1,13 +1,34 @@
 body {
 	font-family: var(--font-family--sans);
 	color: var(--c-text);
+	
+	[data-theme="neo"] & { 
+		font-family: var(--font-family--mono);
+		font-variant-ligatures: none;
+	}
 }
 
 a {
-	color: var(--c-blue-500);
+	color: var(--c-blue-600);
 	transition: color var(--transition-duration);
 	
 	&:hover {
-		color: var(--c-blue-300);
+		color: var(--c-blue-400);
+	}
+	
+	[data-theme="holodeck"] & { 
+		color: var(--c-yellow-300);
+		
+		&:hover {
+			color: var(--c-yellow-500);
+		}
+	}
+	
+	[data-theme="neo"] & { 
+		color: var(--c-green-300);
+		
+		&:hover {
+			color: var(--c-green-500);
+		}
 	}
 }

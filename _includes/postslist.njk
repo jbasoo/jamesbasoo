@@ -9,8 +9,8 @@
 				</div>
 			</div>
 			<div class="card__body">
-				<div>{{ post.data.description }}</div>
-				<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+				{% if post.data.description %}<div>{{ post.data.description }}</div>{% endif %}
+				{% if post.date %}<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>{% endif %}
 			</div>
 		</a>
 	</li>

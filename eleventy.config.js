@@ -9,6 +9,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginPostCss = require("eleventy-plugin-postcss");
 const postcss = require("postcss");
 const postcssNesting = require("postcss-nesting");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
@@ -40,6 +41,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {

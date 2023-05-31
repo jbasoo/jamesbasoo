@@ -10,7 +10,8 @@
 		box-shadow: var(--box-shadow-y-pos--dark);
 	}
 	
-	[data-theme="dark"] & {
+	[data-theme="holodeck"] &,
+	[data-theme="neo"] & {
 		background: var(--c-gray-700);
 	}
 }
@@ -20,7 +21,8 @@
 	text-decoration: initial;
 	transition: filter var(--transition-duration);
 	
-	[data-theme="dark"] & {
+	[data-theme="holodeck"] &,
+	[data-theme="neo"] & {
 		&:hover {
 			filter: contrast(1.2);
 		}
@@ -46,20 +48,22 @@
 	font-family: var(--font-family--mono);
 	font-weight: bold;
 	
-	[data-theme="dark"] & {
-		background-image: linear-gradient(to bottom right, var(--c-red-400), var(--c-yellow-400));
+	[data-theme="holodeck"] & {
+		background-image: linear-gradient(to bottom right, var(--c-yellow-600), var(--c-yellow-400));
+	}
+	
+	[data-theme="neo"] & {
+		background-image: linear-gradient(to bottom right, var(--c-green-600), var(--c-green-400));
 	}
 }
 
 .card__header-text {
 	padding: 1.2rem;
-	color: black;
-	background-image: linear-gradient(to bottom right, var(--c-green-100), var(--c-blue-100));
+	background: linear-gradient(to bottom right, var(--c-green-100), var(--c-blue-100));
 	
-	[data-theme="dark"] & {
-		background-image: none;
-		background-color: var(--c-gray-800);
-		color: white;
+	[data-theme="holodeck"] &,
+	[data-theme="neo"] & {
+		background: var(--c-gray-800);
 	}
 	
 	* { margin: 0; }

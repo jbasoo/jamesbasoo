@@ -8,31 +8,37 @@
   gap: calc(var(--mark-size) * 0.5);
   align-items: center;
   color: var(--c-text);
-  transition: color var(--transition-duration), background var(--transition-duration);
+  transition:
+    color var(--transition-duration),
+    background var(--transition-duration),
+    text-shadow var(--transition-duration),
+    border-color var(--transition-duration)
+  ;
 	text-decoration: none;
-  
-  [data-theme="dark"] & {
-		/* color: var(--c-gray-200); */
-    
-    &:hover {
-      /* @TODO: find nicer hover color */
-      color: var(--c-yellow-300);
-    }
-	}
   
   &:hover {
     color: var(--c-gray-900);
     
-		/* & .pre-mark,
-		& .post-mark {
-			-webkit-background-clip: text;
-			color: transparent;
-			background-image: linear-gradient(to bottom, var(--c-red-400), var(--c-yellow-400));
-		} */
-		
     & .group.base { opacity: 0; }
     & .group.interaction { opacity: 1; }
   }
+  
+  [data-theme="holodeck"] & {
+    color: white;
+    
+    &:hover {
+      text-shadow: 0 0 1rem var(--c-yellow-600);
+    }
+	}
+  
+  [data-theme="neo"] & {
+    color: white;
+    text-shadow: 0 0 1rem var(--c-green-600);
+    
+    &:hover {
+      text-shadow: 0 0 .5rem var(--c-green-400);
+    }
+	}
 }
 
 .pre-mark {
@@ -50,6 +56,10 @@
   font-size: min(calc(var(--mark-size) * 2.2), 10dvw);
   font-weight: bold;
   text-transform: uppercase;
+  
+  [data-theme="neo"] & { 
+    font-weight: normal;
+  }
 }
 
 .mark {
@@ -90,7 +100,15 @@
     transform-origin: center calc(var(--mark-size) / 2);
     border-radius: var(--mark-circle-size);
     mix-blend-mode: screen;
-/*     animation: 1s ease-in-out infinite alternate shift; */
+
+    [data-theme="neo"] & {
+      background: transparent;
+      border: .0625rem solid white;
+    }
+    
+    [data-theme="neo"] .logo:hover & {
+      border-color: white;
+    }
   }
   
   & .red {
@@ -106,6 +124,14 @@
     background: var(--c-blue-500);
     transform: rotate(120deg);
   }
+  
+  /* [data-theme="neo"] & {
+    filter: drop-shadow(0 0 0.1rem var(--c-green-600));
+    
+    &:hover {
+      filter: drop-shadow(0 0 0.2rem var(--c-green-400));
+    }
+  } */
 }
 
 @keyframes rotate {
@@ -114,14 +140,5 @@
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes shift {
-  0% {
-    translate: 0 0;
-  }
-  100% {
-    translate: 0 1rem;
   }
 }

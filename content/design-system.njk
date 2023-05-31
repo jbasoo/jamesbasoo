@@ -1,0 +1,81 @@
+---js
+{
+	layout: "layouts/base.njk",
+	pageType: "design-system",
+	title: "Design System",
+	colors: {
+		variants: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+		families: ["red", "yellow", "green", "blue", "gray"]
+	}
+}
+---
+
+<h1>Super complex "design system"</h1>
+
+<hr>
+
+<section>
+	<h2>Colors</h2>
+	<table class="colors">
+		<thead>
+			<tr>
+				<th></th>
+				{% for variant in colors.variants %}
+					<th class="variant-name">
+						<div>{{ variant }}</div>
+					</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+		{% for family in colors.families %}
+				<tr class="family">
+					<th class="family-name"><div>{{ family }}</div></th>
+					{% for variant in colors.variants %}
+						<td class="color" style="background-color: var(--c-{{ family }}-{{variant}});"></td>
+					{% endfor %}
+				</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</section>
+
+<section>
+	<h2>Buttons</h2>
+	<div>
+		<h3>Levels</h3>
+		<h4>Primary</h4>
+		<a href="#" class="button">a tag</a>
+		<button type="button" class="button">button tag</button>
+		<input type="button" value="input tag" class="button"/>
+		
+		<h4>Secondary</h4>
+		<a href="#" class="button secondary">a tag</a>
+		<button type="button" class="button secondary">button tag</button>
+		<input type="button" value="input tag" class="button secondary"/>
+		
+		<h3>Sizes</h3>
+		<a href="#" class="button" style="font-size: var(--font-size--sm);">a tag - small</a>
+		<button type="button" class="button">button tag - medium</button>
+		<input type="button" value="input tag - large" class="button" style="font-size: var(--font-size--lg);"/>
+		
+		<h3>Widths</h3>
+		<h4>Full Width</h4>
+		<div style="display: grid; gap: .5rem;">
+			<a href="#" class="button full-width">a tag - full width</a>
+			<button type="button" class="button full-width">button tag - full width</button>
+			<input type="button" value="input tag - full width" class="button full-width" />
+		</div>
+		
+		<h4>Base Width</h4>
+		<p>Fluid width, but maxes out at a given width.</p>
+		<a href="#" class="button base-width--sm">a tag - small base width - longer text</a>
+		<button type="button" class="button base-width--md">button tag - medium base width</button>
+		<input type="button" value="input tag - large base width" class="button base-width--lg" />
+		
+		<h3>Disabled</h3>
+		<a href="#" class="button disabled">a tag - disabled</a>
+		<button type="button" disabled class="button">button tag - disabled</button>
+		<input type="button" value="input tag - disabled" disabled class="button"/>
+	</div>
+</section>

@@ -23,6 +23,11 @@
 
 .postlist-item__date {
 	display: block;
-	color: var(--c-gray-500);
+	color: var(--c-gray-600);
 	font-size: var(--font-size--sm);
+	
+	[data-theme="holodeck"] &,
+	[data-theme="neo"] & {
+		color: var(--c-gray-400);	
+	}
 }

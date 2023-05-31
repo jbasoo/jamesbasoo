@@ -1,0 +1,11 @@
+.footer--main {
+	text-align: center;
+	min-height: var(--grid-size);
+	display: grid;
+	place-items: center;
+	
+	> * {
+		margin: 0;
+		transform: translateY(.1rem);
+	}
+}

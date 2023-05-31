@@ -1,0 +1,85 @@
+/*
+	Calculations make the medium sized button at
+	16px font size become a 32px tall while
+	compensating for the unnecessary descender height.
+	em based to scale using font size.
+*/
+
+.button {
+	--vertical-padding: 0.75em;
+	--vertical-padding-ratio: 0.65;
+	
+	/* all: unset; */
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 0.2em;
+	padding:
+		calc(var(--vertical-padding) * var(--vertical-padding-ratio))
+		0.7em
+		calc(var(--vertical-padding) * calc(1 - var(--vertical-padding-ratio)))
+	;
+	background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400));
+	line-height: 1.25;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	transition: background var(--transition-duration), filter var(--transition-duration);
+	
+	&:hover {
+		filter: contrast(1.1);
+		background-image: linear-gradient(to bottom right, var(--c-blue-500), var(--c-green-500));
+	}
+	
+	&.secondary {
+		/* background-clip: text;
+		color: transparent; */
+		background: transparent;
+		color: var(--c-blue-500);
+		border: 2px solid var(--c-blue-500);
+	}
+	
+	&.pill {
+		border-radius: 100vw;
+	}
+	
+	&.full-width {
+		display: block;
+		width: 100%;
+	}
+	
+	&[class*=base-width] {
+		width: 100%;
+	}
+	
+	&.base-width--sm { max-width: 15rem; }
+	&.base-width--md { max-width: 20rem; }
+	&.base-width--lg { max-width: 30rem; }
+	
+	&.disabled,
+	&[disabled] {
+		background-image: linear-gradient(to bottom right, var(--c-gray-400), var(--c-gray-200));
+		
+		&:hover {
+			cursor: not-allowed;
+			filter: none;
+			background-image: linear-gradient(to bottom right, var(--c-gray-400), var(--c-gray-200));
+		}
+	}
+	
+	[data-theme="holodeck"] & {
+		background-image: linear-gradient(to bottom right, var(--c-yellow-600), var(--c-yellow-400));
+		
+		&:hover {
+			background-image: linear-gradient(to bottom right, var(--c-yellow-700), var(--c-yellow-500));
+		}
+	}
+	
+	[data-theme="neo"] & {
+		background-image: linear-gradient(to bottom right, var(--c-green-600), var(--c-green-400));
+		
+		&:hover {
+			background-image: linear-gradient(to bottom right, var(--c-green-700), var(--c-green-500));
+		}
+	}
+}
