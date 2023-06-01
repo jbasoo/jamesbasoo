@@ -14,10 +14,12 @@
 	}
 	
 	& img {
+		--size: 2rem;
+		
 		display: block;
 		object-fit: contain;
-		inline-size: 3rem;
-		block-size: 3rem;
+		inline-size: var(--size);
+		block-size: var(--size);
 		
 		&[src*="github"], &[src*="codepen"] {
 			[data-theme="neo"] &,

@@ -7,8 +7,6 @@ const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginPostCss = require("eleventy-plugin-postcss");
-const postcss = require("postcss");
-const postcssNesting = require("postcss-nesting");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
