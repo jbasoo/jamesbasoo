@@ -1,6 +1,4 @@
 .intro {
-	transform: translateY(.25rem);
-	
 	> * {
 		margin-block: 0;
 	}

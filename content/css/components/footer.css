@@ -1,8 +1,9 @@
 .footer--main {
-	text-align: center;
 	min-height: var(--grid-size);
+	margin-block-start: calc(var(--grid-size) / 2);
 	display: grid;
 	place-items: center;
+	text-align: center;
 	
 	> * {
 		margin: 0;
