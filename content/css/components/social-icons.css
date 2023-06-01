@@ -1,0 +1,29 @@
+.social-icons {
+	& ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	
+	& a {
+		display: block;
+		transition: all var(--transition-duration);
+	}
+	
+	& img {
+		display: block;
+		object-fit: contain;
+		inline-size: 3rem;
+		block-size: 3rem;
+		
+		&[src*="github"], &[src*="codepen"] {
+			[data-theme="neo"] &,
+			[data-theme="holodeck"] & {
+				filter: brightness(100);
+			}
+		}
+	}
+}

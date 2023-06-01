@@ -1,6 +1,7 @@
 @import url('layout.css') layer(layout);
 @import url('typography.css') layer(typography);
-@import url('/fonts/fontsource/overpass/latin.css') layer(typography);
-@import url('/fonts/fontsource/overpass-mono/latin.css') layer(typography);
+/* @import url('/fonts/fontsource/overpass/latin.css') layer(typography); */
+/* @import url('/fonts/fontsource/overpass-mono/latin.css') layer(typography); */
+@import url('fonts.css') layer(typography);
 
 @import url('buttons.css') layer(buttons);

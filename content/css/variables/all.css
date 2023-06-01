@@ -2,7 +2,7 @@
 @import url('typography.css') layer(typography);
 
 :root {
-  --transition-duration: 0.2s;
+  --transition-duration: 0.12s;
 	
 	--mark-size: min(1.5rem, 6dvw);
   --mark-circle-size: calc(var(--mark-size) * 0.666666666);

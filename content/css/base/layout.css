@@ -107,17 +107,3 @@ body {
     }
   }
 }
-
-.highlight-mask {
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400));
-  
-  [data-theme="holodeck"] & {
-    background-image: linear-gradient(to bottom right, var(--c-yellow-600), var(--c-yellow-400));
-  }
-  
-  [data-theme="neo"] & {
-    background-image: linear-gradient(to bottom right, var(--c-green-600), var(--c-green-400));
-  }
-}

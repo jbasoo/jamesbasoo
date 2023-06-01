@@ -23,9 +23,8 @@
   --c-yellow-200: hsl(55, 97%, 90%);
   --c-yellow-300: hsl(50, 97%, 70%);
   --c-yellow-400: hsl(45, 96%, 60%);
-  --c-yellow-500: hsl(40, 92%, 54%);
-  /* --c-yellow-600: hsl(35, 95%, 40%); */
-  --c-yellow-600: hsl(40, 95%, 40%);
+  --c-yellow-500: hsl(42, 92%, 54%);
+  --c-yellow-600: hsl(42, 95%, 45%);
   --c-yellow-700: hsl(40, 90%, 30%);
   --c-yellow-800: hsl(35, 83%, 20%);
   --c-yellow-900: hsl(35, 77%, 9%);
