@@ -9,11 +9,11 @@ body {
 }
 
 a {
-	color: var(--c-blue-600);
+	color: var(--c-blue-700);
 	transition: color var(--transition-duration);
 	
 	&:hover {
-		color: var(--c-blue-400);
+		color: var(--c-blue-500);
 	}
 	
 	[data-theme="holodeck"] & { 
