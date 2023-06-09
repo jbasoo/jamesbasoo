@@ -24,6 +24,12 @@ description: Generates styles, topics, and implementation ideas for weird websit
 		justify-content: center;
 		gap: 1rem;
 	}
+	
+	main {
+		display: grid;
+		place-items: center;
+		gap: 1rem;
+	}
 
 	::backdrop {
 		background: rgba(0,0,0,0.5);
@@ -32,7 +38,6 @@ description: Generates styles, topics, and implementation ideas for weird websit
 	dialog {
 		inset: 1rem;
 		overflow: auto;
-		max-inline: calc(100dvh - 2rem);
 		max-width: 600px;
 		padding: 1rem;
 		text-align: initial;
@@ -45,9 +50,29 @@ description: Generates styles, topics, and implementation ideas for weird websit
 	/*
 		text-wrap: balance; doesnt work on output tags?
 	*/
+	
+	@supports not selector(:popover-open) {
+		[popovertarget="why"] { display: none; } 
+		
+		dialog {
+			position: static;
+			display: block;
+		}
+	}
 </style>
 
-<dialog id="why" popover>
+<header>
+  <h1>Weird Wide Web Generator</h1>
+  <button type="button" popovertarget="why">Why?</button>
+</header>
+
+<main>
+  <output>Make a <em><strong>${aesthetic}</strong></em> style website about <em><strong>${hobby}</strong></em> using <strong>${cssProperty}</strong></output>
+  <button type="button" id="generator">Generate</button>
+</main>
+
+<footer>
+	<dialog id="why" popover>
 		<h2>Why?</h2>
     <p><a href="https://mastodon.social/@hdv@front-end.social">Hidde</a> did a talk at CSS Day including his book reading site. <a href="https://mastodon.social/@sophie@social.lol">Sophie</a> did a talk about <s>pointless</s> fun personal sites and someone asked how to find insipration for creating a personal site.</p>
 		
@@ -62,19 +87,7 @@ description: Generates styles, topics, and implementation ideas for weird websit
       <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index">CSS Properties</a></li>
     </ul>
     <footer><em>Made By <a href="https://jamesbasoo.com">James Basoo</a></em></footer>
-</dialog>
-
-<header>
-  <h1>Weird Wide Web Generator</h1>
-  <button type="button" popovertarget="why">Why?</button>
-</header>
-
-<main>
-  <output>Make a <em><strong>${aesthetic}</strong></em> style website about <em><strong>${hobby}</strong></em> using <strong>${cssProperty}</strong></output>
-</main>
-
-<footer>
-  <button type="button" id="generator">Generate</button>
+	</dialog>
 </footer>
 
 <script>
