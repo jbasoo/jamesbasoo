@@ -1,10 +1,18 @@
 body {
-	font-family: var(--font-family--sans);
 	color: var(--c-text);
+	font-family: var(--font-family--sans--system);
 	
 	[data-theme="neo"] & { 
-		font-family: var(--font-family--mono);
-		font-variant-ligatures: none;
+		font-family: var(--font-family--mono--system);
+	}
+	
+	@media (prefers-reduced-data: no-preference) {
+		font-family: var(--font-family--sans);
+		
+		[data-theme="neo"] & { 
+			font-family: var(--font-family--mono);
+			font-variant-ligatures: none;
+		}
 	}
 }
 
@@ -33,7 +41,7 @@ a {
 	}
 }
 
-.highlight-mask {
+/* .highlight-mask {
 	--c-1: var(--c-blue-400);
 	--c-2: var(--c-green-500);
 	
@@ -50,26 +58,16 @@ a {
 		--c-1: var(--c-yellow-600);
 		--c-2: var(--c-yellow-400);
   }
-}
+} */
 
-.highlight { /* change to emphasis */
-	--color: orange;
+.highlight {
+	color: black;
 	
-	position: relative;
+	[data-theme="neo"] & {
+		color: white;
+  }
 	
-	&:after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		border-radius: 2px;
-		background: repeating-linear-gradient(
-			45deg,
-			var(--color),
-			var(--color) 1px,
-			transparent 2px,
-			transparent 5px
-		);
-		opacity: 0.2;
-	}
+  [data-theme="holodeck"] & {
+		color: white;
+  }
 }

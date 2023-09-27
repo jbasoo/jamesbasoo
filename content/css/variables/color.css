@@ -1,13 +1,4 @@
-:root {
-  --c-gray-100: hsl(196, 5%, 97%);
-  --c-gray-200: hsl(196, 5%, 90%);
-  --c-gray-300: hsl(196, 5%, 81%);
-  --c-gray-400: hsl(196, 5%, 67%);
-  --c-gray-500: hsl(196, 5%, 57%);
-  --c-gray-600: hsl(196, 5%, 42%);
-  --c-gray-700: hsl(196, 5%, 30%);
-  --c-gray-800: hsl(196, 5%, 20%);
-  --c-gray-900: hsl(196, 5%, 9%);
+:root {  
 
   --c-red-100: hsl(357, 100%, 97%);
   --c-red-200: hsl(357, 100%, 90%);
@@ -18,7 +9,7 @@
   --c-red-700: hsl(357, 88%, 30%);
   --c-red-800: hsl(357, 82%, 20%);
   --c-red-900: hsl(357, 73%, 10%);
-  
+      
   --c-yellow-100: hsl(60, 100%, 97%);
   --c-yellow-200: hsl(55, 97%, 90%);
   --c-yellow-300: hsl(50, 97%, 70%);
@@ -28,7 +19,7 @@
   --c-yellow-700: hsl(40, 90%, 30%);
   --c-yellow-800: hsl(35, 83%, 20%);
   --c-yellow-900: hsl(35, 77%, 9%);
-    
+  
   --c-green-100: hsl(136, 100%, 97%);
   --c-green-200: hsl(136, 100%, 90%);
   --c-green-300: hsl(136, 100%, 76%);
@@ -49,6 +40,101 @@
   --c-blue-800: hsl(208, 86%, 20%);
   --c-blue-900: hsl(212, 84%, 7%);
   
+  --chroma-2:  0.008;
+  --chroma-5:  0.02;
+  --chroma-10: 0.04;
+  --chroma-15: 0.06;
+  --chroma-20: 0.08;
+  --chroma-30: 0.11;
+  --chroma-40: 0.19;
+  --chroma-50: 0.21;
+  --chroma-60: 0.25;
+  --chroma-70: 0.19;
+  --chroma-80: 0.11;
+  --chroma-90: 0.04;
+  --chroma-95: 0.02;
+  --chroma-98: 0.008;
+  
+  --hue-red:    25;
+  --hue-yellow: 85;
+  --hue-green:  145;
+  --hue-blue:   230;
+  
+  --c-red-2:  oklch(2%  var(--chroma-2)  var(--hue-red));
+  --c-red-5:  oklch(5%  var(--chroma-5)  var(--hue-red));
+  --c-red-10: oklch(10% var(--chroma-10) var(--hue-red));
+  --c-red-15: oklch(15% var(--chroma-15) var(--hue-red));
+  --c-red-20: oklch(20% var(--chroma-20) var(--hue-red));
+  --c-red-30: oklch(30% var(--chroma-30) var(--hue-red));
+  --c-red-40: oklch(40% var(--chroma-40) var(--hue-red));
+  --c-red-50: oklch(50% var(--chroma-50) var(--hue-red));
+  --c-red-60: oklch(60% var(--chroma-60) var(--hue-red));
+  --c-red-70: oklch(70% var(--chroma-70) var(--hue-red));
+  --c-red-80: oklch(80% var(--chroma-80) var(--hue-red));
+  --c-red-90: oklch(90% var(--chroma-90) var(--hue-red));
+  --c-red-95: oklch(95% var(--chroma-95) var(--hue-red));
+  --c-red-98: oklch(98% var(--chroma-98) var(--hue-red));
+  
+  --c-yellow-2:  oklch(2%  var(--chroma-2)  var(--hue-yellow));
+  --c-yellow-5:  oklch(5%  var(--chroma-5)  var(--hue-yellow));
+  --c-yellow-10: oklch(10% var(--chroma-10) var(--hue-yellow));
+  --c-yellow-15: oklch(15% var(--chroma-15) var(--hue-yellow));
+  --c-yellow-20: oklch(20% var(--chroma-20) var(--hue-yellow));
+  --c-yellow-30: oklch(30% var(--chroma-30) var(--hue-yellow));
+  --c-yellow-40: oklch(40% var(--chroma-40) var(--hue-yellow));
+  --c-yellow-50: oklch(50% var(--chroma-50) var(--hue-yellow));
+  --c-yellow-60: oklch(60% var(--chroma-60) var(--hue-yellow));
+  --c-yellow-70: oklch(70% var(--chroma-70) var(--hue-yellow));
+  --c-yellow-80: oklch(80% var(--chroma-80) var(--hue-yellow));
+  --c-yellow-90: oklch(90% var(--chroma-90) var(--hue-yellow));
+  --c-yellow-95: oklch(95% var(--chroma-95) var(--hue-yellow));
+  --c-yellow-98: oklch(98% var(--chroma-98) var(--hue-yellow));
+  
+  --c-green-2:  oklch(2%  var(--chroma-2)  var(--hue-green));
+  --c-green-5:  oklch(5%  var(--chroma-5)  var(--hue-green));
+  --c-green-10: oklch(10% var(--chroma-10) var(--hue-green));
+  --c-green-15: oklch(15% var(--chroma-15) var(--hue-green));
+  --c-green-20: oklch(20% var(--chroma-20) var(--hue-green));
+  --c-green-30: oklch(30% var(--chroma-30) var(--hue-green));
+  --c-green-40: oklch(40% var(--chroma-40) var(--hue-green));
+  --c-green-50: oklch(50% var(--chroma-50) var(--hue-green));
+  --c-green-60: oklch(60% var(--chroma-60) var(--hue-green));
+  --c-green-70: oklch(70% var(--chroma-70) var(--hue-green));
+  --c-green-80: oklch(80% var(--chroma-80) var(--hue-green));
+  --c-green-90: oklch(90% var(--chroma-90) var(--hue-green));
+  --c-green-95: oklch(95% var(--chroma-95) var(--hue-green));
+  --c-green-98: oklch(98% var(--chroma-98) var(--hue-green));
+
+  --c-blue-2:  oklch(2%  var(--chroma-2)  var(--hue-blue));
+  --c-blue-5:  oklch(5%  var(--chroma-5)  var(--hue-blue));
+  --c-blue-10: oklch(10% var(--chroma-10) var(--hue-blue));
+  --c-blue-15: oklch(15% var(--chroma-15) var(--hue-blue));
+  --c-blue-20: oklch(20% var(--chroma-20) var(--hue-blue));
+  --c-blue-30: oklch(30% var(--chroma-30) var(--hue-blue));
+  --c-blue-40: oklch(40% var(--chroma-40) var(--hue-blue));
+  --c-blue-50: oklch(50% var(--chroma-50) var(--hue-blue));
+  --c-blue-60: oklch(60% var(--chroma-60) var(--hue-blue));
+  --c-blue-70: oklch(70% var(--chroma-70) var(--hue-blue));
+  --c-blue-80: oklch(80% var(--chroma-80) var(--hue-blue));
+  --c-blue-90: oklch(90% var(--chroma-90) var(--hue-blue));
+  --c-blue-95: oklch(95% var(--chroma-95) var(--hue-blue));
+  --c-blue-98: oklch(98% var(--chroma-98) var(--hue-blue));
+  
+  --c-gray-2: oklch(2% 0 0);
+  --c-gray-5: oklch(5% 0 0);
+  --c-gray-10: oklch(10% 0 0);
+  --c-gray-15: oklch(15% 0 0);
+  --c-gray-20: oklch(20% 0 0);
+  --c-gray-30: oklch(30% 0 0);
+  --c-gray-40: oklch(40% 0 0);
+  --c-gray-50: oklch(50% 0 0);
+  --c-gray-60: oklch(60% 0 0);
+  --c-gray-70: oklch(70% 0 0);
+  --c-gray-80: oklch(80% 0 0);
+  --c-gray-90: oklch(90% 0 0);
+  --c-gray-95: oklch(95% 0 0);
+  --c-gray-98: oklch(98% 0 0);
+  
   /* --c-brown-100: hsl(40, 20%, 96%);
   --c-brown-200: hsl(40, 14%, 90%);
   --c-brown-300: hsl(40, 15%, 74%);
@@ -61,16 +147,22 @@
   --c-accent-light: var(--c-blue-200);
   --c-accent: var(--c-blue-300);
   --c-accent-dark: var(--c-blue-400);
+  --c-accent-contrast: var(--c-blue-700);
+  --c-accent-contrast-interaction: var(--c-blue-900);
   
   &[data-theme="holodeck"] {
     --c-accent-light: var(--c-yellow-200);
     --c-accent: var(--c-yellow-300);
     --c-accent-dark: var(--c-yellow-400);
+    --c-accent-contrast: var(--c-yellow-700);
+    --c-accent-contrast-interaction: var(--c-yellow-900);
   }
   
   &[data-theme="neo"] {
     --c-accent-light: var(--c-green-200);
     --c-accent: var(--c-green-300);
     --c-accent-dark: var(--c-green-400);
+    --c-accent-contrast: var(--c-green-700);
+    --c-accent-contrast-interaction: var(--c-green-900);
   }
 }

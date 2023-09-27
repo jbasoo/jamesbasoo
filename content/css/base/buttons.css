@@ -58,12 +58,12 @@
 	
 	&.disabled,
 	&[disabled] {
-		background-image: linear-gradient(to bottom right, var(--c-gray-400), var(--c-gray-200));
+		background-image: linear-gradient(to bottom right, var(--c-gray-60), var(--c-gray-80));
 		
 		&:hover {
 			cursor: not-allowed;
 			filter: none;
-			background-image: linear-gradient(to bottom right, var(--c-gray-400), var(--c-gray-200));
+			background-image: linear-gradient(to bottom right, var(--c-gray-60), var(--c-gray-80));
 		}
 	}
 	

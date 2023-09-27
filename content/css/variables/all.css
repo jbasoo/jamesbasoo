@@ -17,20 +17,20 @@
   --grid-line-thickness: .0625rem;
   --grid-size: 3rem;
 
-  --c-page-background: var(--c-gray-100);
-  --c-text: var(--c-gray-700);
+  --c-page-background: var(--c-gray-98);
+  --c-text: var(--c-gray-30);
   
   --border-radius-500: 0.2rem;
 }
 
 [data-theme="holodeck"] {
-  --c-page-background: var(--c-gray-900);
-  --c-text: var(--c-gray-100);
-  --grid-line-color: var(--c-yellow-700);
+  --c-page-background: var(--c-gray-5);
+  --c-text: var(--c-gray-98);
+  --grid-line-color: var(--c-yellow-30);
 }
 
 [data-theme="neo"] { 
-  --c-page-background: var(--c-gray-900);
-  --c-text: var(--c-gray-100);
+  --c-page-background: var(--c-gray-5);
+  --c-text: var(--c-gray-98);
   --grid-line-color: var(--c-green-700);
 }

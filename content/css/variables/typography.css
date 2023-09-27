@@ -8,6 +8,11 @@
 	--font-size--xl: 1.5rem;
 	--font-size--2xl: 1.75rem;
 	--font-size--3xl: 2rem;
+	
 	--font-family--sans: 'Overpass', sans-serif;
 	--font-family--mono: 'Overpass Mono', sans-serif;
+	
+	/* https://systemfontstack.com/ */
+	--font-family--sans--system: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--font-family--mono--system: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }

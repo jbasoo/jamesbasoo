@@ -1,20 +1,4 @@
 <header class="header--main">
+	{% include 'components/nav.njk' %}
 	{% include 'components/logo.njk' %}
-	
-	<nav class="nav--main">
-		<h2 class="visually-hidden">Top level navigation menu</h2>
-		{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-		{# <ul>
-			{%- for entry in collections.all | eleventyNavigation %}
-				<li><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-			{%- endfor %}
-		</ul> #}
-	</nav>
-	
-	<form class="theme-switcher">
-		<label for="theme" class="visually-hidden">Theme Switcher</label>
-		<input type="radio" name="theme" id="theme-switcher__light" value="light" title="Light" checked>
-		<input type="radio" name="theme" id="theme-switcher__neo" value="neo" title= "Neo">
-		<input type="radio" name="theme" id="theme-switcher__holodeck" value="holodeck" title="Holodeck">
-	</form>
 </header>

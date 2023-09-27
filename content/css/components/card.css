@@ -12,7 +12,7 @@
 	
 	[data-theme="holodeck"] &,
 	[data-theme="neo"] & {
-		background: var(--c-gray-700);
+		background: var(--c-gray-30);
 	}
 }
 
@@ -63,7 +63,7 @@
 	
 	[data-theme="holodeck"] &,
 	[data-theme="neo"] & {
-		background: var(--c-gray-800);
+		background: var(--c-gray-20);
 	}
 	
 	* { margin: 0; }

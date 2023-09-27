@@ -1,6 +1,14 @@
 .header--main {
-  position: relative;
-  padding: 0 1rem;
+  position: sticky;
+  /* padding: 0 1rem; */
+  top: 0;
+  /* background-color: var(--c-page-background); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: max(var(--grid-size) * 17, var(--grid-size) * 13, var(--grid-size) * 9);
+  max-width: calc(var(--grid-size) * 17);
+  margin-inline: auto; */
 }
 
 .theme-switcher {
