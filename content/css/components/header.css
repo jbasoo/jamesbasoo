@@ -9,16 +9,17 @@
 	justify-content: center;
 	align-items: center;
 	min-height: var(--grid-size);
-  
-  & [type=radio] {
+
+  & button {
     --c-fill: var(--c-accent-light);
     --c-fill-size: 40%;
-    
+
     margin: 0;
     inline-size: var(--grid-size);
     block-size: var(--grid-size);
     appearance: none;
     -webkit-appearance: none;
+    border: 0;
     background:
       no-repeat
       radial-gradient(
@@ -30,46 +31,36 @@
     ;
     cursor: pointer;
     transition: background var(--transition-duration);
-    
+
     &:hover {
       --c-fill: var(--c-accent-dark);
     }
-    
-    &:checked {
-      --c-fill: var(--c-accent-dark);
-      cursor: default;
-    }
-    /* box-shadow: 0 0 0 1px var(--c-accent-light); */
-    
+
     &[value="light"] {
       --c-accent-light: var(--c-blue-300);
       --c-accent: var(--c-blue-400);
       --c-accent-dark: var(--c-blue-500);
     }
-      
+
     &[value="neo"] {
       --c-accent-light: var(--c-green-400);
       --c-accent: var(--c-green-500);
       --c-accent-dark: var(--c-green-600);
     }
-    
+
     &[value="holodeck"] {
       --c-accent-light: var(--c-yellow-400);
       --c-accent: var(--c-yellow-500);
       --c-accent-dark: var(--c-yellow-600);
     }
-    
+
     [data-theme="holodeck"] &,
-    [data-theme="neo"] & {      
+    [data-theme="neo"] & {
       &[value="neo"],
       &[data-theme="holodeck"] {
         --c-fill: var(--c-accent);
-        
+
         &:hover {
-          --c-fill: var(--c-accent-light);
-        }
-        
-        &:checked {
           --c-fill: var(--c-accent-light);
         }
       }

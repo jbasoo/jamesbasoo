@@ -25,19 +25,19 @@
 		{# {%- css %}* { box-sizing: border-box; }{% endcss %} #}
 		{#- Add the contents of a file to the bundle #}
 		{# {%- css %}{% include "public/css/index.css" %}{% endcss %} #}
-		<script src="/js/theme-switcher.js"></script>
 		<link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 		{#- Or add from node_modules #}
 		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
 		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
 		{# <style>{% getBundle "css" %}</style> #}
-		
+
+		<script src="/js/components/theme-switcher.js"></script>
+		<script src="/js/deferrable.js" type=module></script>
 		{# <script src="/js/main.js" defer></script> #}
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
-		<div class="page-bg" role="presentation"></div>
 
 		{% include 'components/header.njk' %}
 

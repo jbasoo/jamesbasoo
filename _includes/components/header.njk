@@ -1,6 +1,6 @@
 <header class="header--main">
 	{% include 'components/logo.njk' %}
-	
+
 	<nav class="nav--main">
 		<h2 class="visually-hidden">Top level navigation menu</h2>
 		{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
@@ -10,11 +10,11 @@
 			{%- endfor %}
 		</ul> #}
 	</nav>
-	
-	<form class="theme-switcher">
+
+	<div class="theme-switcher">
 		<label for="theme" class="visually-hidden">Theme Switcher</label>
-		<input type="radio" name="theme" id="theme-switcher__light" value="light" title="Light">
-		<input type="radio" name="theme" id="theme-switcher__neo" value="neo" title= "Neo">
-		<input type="radio" name="theme" id="theme-switcher__holodeck" value="holodeck" title="Holodeck">
-	</form>
+		<button type="button" name="theme" id="theme-switcher__light" value="light" title="Light">
+		<button type="button" name="theme" id="theme-switcher__neo" value="neo" title= "Neo">
+		<button type="button" name="theme" id="theme-switcher__holodeck" value="holodeck" title="Holodeck">
+	</div>
 </header>

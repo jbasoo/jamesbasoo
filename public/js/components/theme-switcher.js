@@ -2,11 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 	const themeSwitcher = document.querySelector('.theme-switcher');
-	const defaultTheme = document.querySelectorAll('.theme-switcher input')[0].value;
+	const defaultTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'holodeck' : 'light');
 	const currentTheme = localStorage.getItem('theme');
-	
-	console.log(currentTheme);
-	
+
 	if(!currentTheme) {
 		localStorage.setItem('theme', defaultTheme);
 		document.documentElement.dataset.theme = defaultTheme;
@@ -14,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	else {
 		document.documentElement.dataset.theme = currentTheme;
 	}
-	
+
 	if(themeSwitcher) {
 		themeSwitcher.addEventListener('click', (event) => {
 			document.querySelector('html').dataset.theme = event.target.value;

@@ -10,24 +10,18 @@ body {
   line-height: 1.5;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-}
 
-.page-bg {
-  position: absolute;
-  z-index: -10;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  will-change: background-image;
-  
   &:before,
-  &:after {  
+  &:after {
     content: "";
     position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    will-change: background-image;
     z-index: -1;
     left: calc(var(--grid-overspill) * -1);
-    width: calc((var(--grid-overspill) * 2) + 100%);
-    height: max(25dvh, 20rem);
+    right: calc(var(--grid-overspill) * -1);
+    height: min(50dvh, var(--grid-size) * 10);
     background-image:
       linear-gradient(var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness)),
       linear-gradient(90deg, var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness))
@@ -36,23 +30,23 @@ body {
       var(--grid-size) var(--grid-size),
       var(--grid-size) var(--grid-size)
     ;
-    
-    -webkit-mask-image: var(--grid-mask);
-    mask-image: var(--grid-mask);
+
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
   }
-  
+
   &:before {
     /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
-    --grid-mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
-    
+    --mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
+
     top: 0;
     background-position: center calc(0% - var(--grid-line-thickness));
   }
-  
+
   &:after {
     /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
-    --grid-mask: radial-gradient(ellipse at center bottom, black 0, transparent 70%);
-    
+    --mask: radial-gradient(ellipse at center bottom, black 0, transparent 70%);
+
     bottom: 0;
     background-position: center calc(100% + var(--grid-line-thickness));
   }
@@ -75,7 +69,7 @@ body {
   gap: 2rem;
   margin-inline: auto;
   width: min(calc(100dvw - 4rem), $bp_xl);
-  
+
   @media (width >= 1200px) {
     grid-template-columns: 8fr 4fr;
 	}
@@ -93,12 +87,12 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    
+
     & .start {
       font-size: 6rem;
       line-height: 1;
     }
-    
+
     & .end {
       flex-grow: 1;
       position: relative;
