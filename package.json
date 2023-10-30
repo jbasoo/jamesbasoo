@@ -50,6 +50,7 @@
 	},
 	"dependencies": {
 		"@fontsource/overpass": "^4.5.11",
-		"@fontsource/overpass-mono": "^4.5.11"
+		"@fontsource/overpass-mono": "^4.5.11",
+		"lit": "^3.0.0"
 	}
 }
