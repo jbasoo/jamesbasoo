@@ -1,17 +1,67 @@
-/* overpass-mono-latin-300-normal*/
+/* SANS SERIF */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url('/fonts/fontsource/overpass/files/overpass-latin-300-normal.woff2') format('woff2'),
+    url('/fonts/fontsource/overpass/files/overpass-latin-300-normal.woff') format('woff')
+  ;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    url('/fonts/fontsource/overpass/files/overpass-latin-700-normal.woff2') format('woff2'),
+    url('/fonts/fontsource/overpass/files/overpass-latin-700-normal.woff') format('woff')
+  ;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url('/fonts/fontsource/overpass/files/overpass-latin-300-italic.woff2') format('woff2'),
+    url('/fonts/fontsource/overpass/files/overpass-latin-300-italic.woff') format('woff')
+  ;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    url('/fonts/fontsource/overpass/files/overpass-latin-700-italic.woff2') format('woff2'),
+    url('/fonts/fontsource/overpass/files/overpass-latin-700-italic.woff') format('woff')
+  ;
+}
+
+/* MONOSPACE */
 @font-face {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-300-normal.woff2') format('woff2'), url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-300-normal.woff') format('woff');
+  src:
+    url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-300-normal.woff2') format('woff2'),
+    url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-300-normal.woff') format('woff')
+  ;
 }
 
-/* overpass-mono-latin-700-normal*/
 @font-face {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-700-normal.woff2') format('woff2'), url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-700-normal.woff') format('woff');
+  src:
+    url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-700-normal.woff2') format('woff2'),
+    url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-700-normal.woff') format('woff')
+  ;
 }
