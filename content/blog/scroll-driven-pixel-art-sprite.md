@@ -83,8 +83,14 @@ The original demos utilised scroll velocity but I haven't tried that yet. The po
 
 To be honest I still haven't fully grasped the original concept, I need to do more tinkering. I've only managed to detect 8 directions, but maybe one of you maths boffins can figure out more fine-grained directionality based on the velocities/directions.
 
+Happy coding, you got this!
+
 <hr>
 
-Happy coding, you got this!
+## Attributions
+[Directional control concept](https://www.bram.us/2023/10/23/css-scroll-detection/#the-concept)
+
+Assets: [1](https://cupnooble.itch.io/sprout-lands-asset-pack) [2](https://axulart.itch.io/small-8-direction-characters)
+
 
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
