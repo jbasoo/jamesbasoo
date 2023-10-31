@@ -23,7 +23,7 @@ module.exports = function(eleventyConfig) {
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
-	
+
 	// Custom plugins
 	eleventyConfig.addPlugin(pluginPostCss);
 
@@ -95,10 +95,10 @@ module.exports = function(eleventyConfig) {
 	// 		slugify: eleventyConfig.getFilter("slugify")
 	// 	});
 	// });
-	
+
 	eleventyConfig.setServerOptions({
-    port: 8113
-  });
+		port: 8113
+	});
 
 	// Features to make your build faster (when you need them)
 
