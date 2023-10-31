@@ -1,5 +1,6 @@
 :root {
   accent-color: var(--c-accent);
+  overflow-x: hidden;
 }
 
 body {
