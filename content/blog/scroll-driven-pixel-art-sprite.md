@@ -10,7 +10,7 @@ tags:
 ---
 <video controls loop src="/video/pixel-art-scroll-8-dir.mp4"></video>
 
-These fancy, new, CSS scroll-driven animations are proving to be pretty darn powerful. I found Bramus' concept of using them to detect scroll direction intriguing, and after experimenting a bit, discovered that detecting multiple axes allows you to directionally control an image sprite! Without JavaScript! This involves creating [stepped sprite animations](https://blog.logrocket.com/making-css-animations-using-a-sprite-sheet/) for each direction and running them when that direction is detected.
+These fancy, new, CSS scroll-driven animations are proving to be pretty darn powerful. I found [Bramus' concept](https://www.bram.us/2023/10/23/css-scroll-detection/) of using them to detect scroll direction intriguing, and after experimenting a bit, discovered that detecting multiple axes allows you to directionally control an image sprite! Without JavaScript! This involves creating [stepped sprite animations](https://blog.logrocket.com/making-css-animations-using-a-sprite-sheet/) for each direction and running them when that direction is detected.
 
 ## The Concept
 

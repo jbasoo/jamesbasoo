@@ -19,6 +19,7 @@
 	/* text-transform: uppercase; */
 	font-weight: bold;
 	font-size: 1.3rem;
+	margin-block-start: .3em;
 }
 
 .postlist-item__date {
