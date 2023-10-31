@@ -1,0 +1,17 @@
+.feature-fallback {
+    .feature {
+        display: none;
+    }
+
+    &.sda {
+        @supports(animation-timeline: scroll(block root)) {
+            .feature {
+                display: block;
+            }
+
+            .fallback {
+                display: none;
+            }
+        }
+    }
+}

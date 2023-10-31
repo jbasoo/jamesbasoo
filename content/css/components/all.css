@@ -5,5 +5,6 @@
 @import url('footer.css') layer(footer);
 @import url('card.css') layer(component);
 @import url('social-icons.css') layer(component);
+@import url('feature-fallback.css') layer(component);
 @import url('posts.css') layer(posts);
 @import url('home.css') layer(page);

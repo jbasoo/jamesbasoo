@@ -5,11 +5,11 @@
 	padding: 0;
 	/* width: min(calc(100% - 2rem), 1200px); */
 	list-style: none;
-	
+
 	@container (width >= 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	
+
 	@container (width >= 1200px) {
 		grid-template-columns: repeat(4, 1fr);
 	}
@@ -25,9 +25,20 @@
 	display: block;
 	color: var(--c-gray-600);
 	font-size: var(--font-size--sm);
-	
+
 	[data-theme="holodeck"] &,
 	[data-theme="neo"] & {
-		color: var(--c-gray-400);	
+		color: var(--c-gray-400);
+	}
+}
+
+.post-metadata {
+	.tags {
+		list-style: none;
+		padding: 0;
+
+		& li {
+			display: inline-block;
+		}
 	}
 }

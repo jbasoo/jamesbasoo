@@ -7,9 +7,10 @@ body {
   position: relative;
   transition: color var(--transition-duration), background-color var(--transition-duration);
   will-change: color, background-color;
-  line-height: 1.5;
+  line-height: 1.75;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
+  overflow-x: hidden;
 
   &:before,
   &:after {
@@ -59,6 +60,7 @@ body {
 .layout--1col {
   display: grid;
   gap: 2rem;
+  grid-template-columns: minmax(0, 1fr);
   margin-inline: auto;
   width: min(calc(100dvw - 4rem), $bp_sm);
 }
@@ -75,10 +77,19 @@ body {
 	}
 }
 
-.main {
+.owl {
   > * + * {
     margin-top: 1rem;
   }
+}
+
+video {
+  max-width: 100%;
+}
+
+.scroll-x {
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 /* .intro {

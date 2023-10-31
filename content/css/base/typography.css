@@ -1,8 +1,9 @@
 body {
 	font-family: var(--font-family--sans);
 	color: var(--c-text);
-	
-	[data-theme="neo"] & { 
+	text-wrap: pretty;
+
+	[data-theme="neo"] & {
 		font-family: var(--font-family--mono);
 		font-variant-ligatures: none;
 	}
@@ -11,22 +12,22 @@ body {
 a {
 	color: var(--c-blue-700);
 	transition: color var(--transition-duration);
-	
+
 	&:hover {
 		color: var(--c-blue-500);
 	}
-	
-	[data-theme="holodeck"] & { 
+
+	[data-theme="holodeck"] & {
 		color: var(--c-yellow-300);
-		
+
 		&:hover {
 			color: var(--c-yellow-500);
 		}
 	}
-	
-	[data-theme="neo"] & { 
+
+	[data-theme="neo"] & {
 		color: var(--c-green-300);
-		
+
 		&:hover {
 			color: var(--c-green-500);
 		}
@@ -36,16 +37,16 @@ a {
 .highlight-mask {
 	--c-1: var(--c-blue-400);
 	--c-2: var(--c-green-500);
-	
+
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom right, var(--c-1), var(--c-2));
-  
+
 	[data-theme="neo"] & {
 		--c-1: var(--c-green-600);
 		--c-2: var(--c-green-400);
   }
-	
+
   [data-theme="holodeck"] & {
 		--c-1: var(--c-yellow-600);
 		--c-2: var(--c-yellow-400);
@@ -54,9 +55,9 @@ a {
 
 .highlight { /* change to emphasis */
 	--color: orange;
-	
+
 	position: relative;
-	
+
 	&:after {
 		content: "";
 		position: absolute;
@@ -72,4 +73,14 @@ a {
 		);
 		opacity: 0.2;
 	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+	line-height: 1.3;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+	font-family: var(--font-family--mono);
+	font-variant-ligatures: none;
 }

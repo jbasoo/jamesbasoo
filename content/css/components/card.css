@@ -5,11 +5,11 @@
 	overflow: hidden;
 	container-type: inline-size;
 	transition: box-shadow var(--transition-duration);
-	
+
 	&:hover {
 		box-shadow: var(--box-shadow-y-pos--dark);
 	}
-	
+
 	[data-theme="holodeck"] &,
 	[data-theme="neo"] & {
 		background: var(--c-gray-700);
@@ -20,7 +20,7 @@
 	color: inherit;
 	text-decoration: initial;
 	transition: filter var(--transition-duration);
-	
+
 	[data-theme="holodeck"] &,
 	[data-theme="neo"] & {
 		&:hover {
@@ -47,27 +47,27 @@
 	background-image: linear-gradient(to bottom right, var(--c-blue-400), var(--c-green-400));
 	font-family: var(--font-family--mono);
 	font-weight: bold;
-	
+
 	[data-theme="holodeck"] & {
 		background-image: linear-gradient(to bottom right, var(--c-yellow-600), var(--c-yellow-400));
 	}
-	
+
 	[data-theme="neo"] & {
 		background-image: linear-gradient(to bottom right, var(--c-green-600), var(--c-green-400));
 	}
 }
 
 .card__header-text {
-	padding: 1.2rem;
+	padding: .8rem 1.2rem;
 	background: linear-gradient(to bottom right, var(--c-green-100), var(--c-blue-100));
-	
+
 	[data-theme="holodeck"] &,
 	[data-theme="neo"] & {
 		background: var(--c-gray-800);
 	}
-	
+
 	* { margin: 0; }
-	
+
 	* + * {
 		margin-top: 0.2rem;
 	}
@@ -75,9 +75,9 @@
 
 .card__body {
 	padding: 1.2rem;
-	
+
 	* { margin: 0; }
-	
+
 	* + * {
 		margin-top: 0.5rem;
 	}

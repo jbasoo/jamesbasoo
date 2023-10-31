@@ -5,7 +5,6 @@
   font-display: swap;
   font-weight: 400;
   src: url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-300-normal.woff2') format('woff2'), url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-300-normal.woff') format('woff');
-  
 }
 
 /* overpass-mono-latin-700-normal*/
@@ -15,5 +14,4 @@
   font-display: swap;
   font-weight: 700;
   src: url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-700-normal.woff2') format('woff2'), url('/fonts/fontsource/overpass-mono/files/overpass-mono-latin-700-normal.woff') format('woff');
-  
 }

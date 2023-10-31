@@ -3,7 +3,7 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 4
+numberOfLatestPostsToShow: 1
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -11,12 +11,11 @@ numberOfLatestPostsToShow: 4
 {% set postslistCounter = postsCount %}
 
 <div class="layout--1col">
-	<div class="main">
-		<div class="intro">
-			<h1>
-				Hi! I'm <span class="highlight-mask" title="Gradient text effect that is on literally every framework homepage right now">James</span>.<br>
-				I make web stuff.
-			</h1>
+	<main class="intro owl">
+		<h1>
+			Hi! I'm <span class="highlight-mask" title="Gradient text effect that is on literally every framework homepage right now">James</span>.<br>
+			I make web stuff.
+		</h1>
 
 {% renderTemplate "md" %}
 I'm a front-end developer who has been making user-friendly, e-commerce experiences for over 10 years.
@@ -58,10 +57,13 @@ I have a focus on the fundamentals of the web such as semantic, accessible **HTM
 When I'm not pushing buttons, you'll find me travelling, tinkering with old cars or cooking fusion dishes that would enrage traditionalists.
 
 ## About this site
-[This site](https://github.com/jbasoo/jamesbasoo) is built with [Eleventy](https://www.11ty.dev/). It's my sandbox so some things may or may not work in all browsers or be performant. I used the [Eleventy Blog Starter](https://github.com/11ty/eleventy-base-blog) but I've hidden the blog for now as I haven't written any posts yet. I'm kinda liking cascade layers at the moment so maybe that'll be my first post :)
-
-## Find me on
+[This site](https://github.com/jbasoo/jamesbasoo) is built with [Eleventy](https://www.11ty.dev/). It's my sandbox so some things may or may not work in all browsers or be performant. I used the [Eleventy Blog Starter](https://github.com/11ty/eleventy-base-blog).
 {% endrenderTemplate %}
+
+<h2>Latest from the <a href="/blog">blog</a></h2>
+{% include "postslist.njk" %}
+
+<h2>Find me on</h2>
 
 <div class="social-icons">
 	<ul>
@@ -103,19 +105,6 @@ width: 300px;
 height: 80px;
 }
 </code></pre> #}
-	</div>
-</div>
-{# <div class="sidebar posts">
-	<div class="container">
-		{% include "postslist.njk" %}
-
-		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-		{% if morePosts > 0 %}
-			<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-		{% endif %}
-	</div>
-</div> #}
-</div>
 
 {# List every content page in the project #}
 {#
@@ -125,3 +114,6 @@ height: 80px;
 	{%- endfor %}
 </ul>
 #}
+
+	</main>
+</div>

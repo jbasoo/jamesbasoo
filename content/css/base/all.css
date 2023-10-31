@@ -3,5 +3,6 @@
 /* @import url('/fonts/fontsource/overpass/latin.css') layer(typography); */
 /* @import url('/fonts/fontsource/overpass-mono/latin.css') layer(typography); */
 @import url('fonts.css') layer(typography);
+@import url('../../../node_modules/prismjs/themes/prism-tomorrow.css') layer(typography);
 
 @import url('buttons.css') layer(buttons);
