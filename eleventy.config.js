@@ -82,6 +82,13 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	eleventyConfig.addFilter("filterOutAssets", items => {
+		const disallowed = ['css'];
+		const filteredItems = items.filter(item => !disallowed.includes(item.page.templateSyntax));
+
+		return filteredItems;
+	});
+
 	// Customize Markdown library settings:
 	// eleventyConfig.amendLibrary("md", mdLib => {
 	// 	mdLib.use(markdownItAnchor, {
