@@ -103,4 +103,4 @@ Happy coding, you got this!
 Assets: [1](https://cupnooble.itch.io/sprout-lands-asset-pack) [2](https://axulart.itch.io/small-8-direction-characters)
 
 
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
