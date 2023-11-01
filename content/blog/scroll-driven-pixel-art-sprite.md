@@ -8,13 +8,17 @@ tags:
     - style queries
     - nojs
 ---
-<video controls loop src="/video/pixel-art-scroll-8-dir.mp4"></video>
-
 These fancy, new, CSS scroll-driven animations are proving to be pretty darn powerful. I found [Bramus' concept](https://www.bram.us/2023/10/23/css-scroll-detection/) of using them to detect scroll direction intriguing, and after experimenting a bit, discovered that detecting multiple axes allows you to directionally control an image sprite! Without JavaScript! This involves creating [stepped sprite animations](https://blog.logrocket.com/making-css-animations-using-a-sprite-sheet/) for each direction and running them when that direction is detected.
+
+<div class="breakout">
+  <video controls loop src="/video/pixel-art-scroll-8-dir.mp4"></video>
+</div>
 
 ## The Concept
 
 I'd recommend reading the [single axis explanation](https://www.bram.us/2023/10/23/css-scroll-detection/#the-concept) first as Bramus goes into the core concept. The multi axis is essentially the same, just duplicated for the horizontal axis which can be seen in the [Wormhole demo](https://www.bram.us/2023/10/23/css-scroll-detection/#demo-wormhole) and my [reduced experiment](https://codepen.io/jbasoo/pen/NWoNvLx). Detecting both axes just comes down to adding another animation timeline for the inline axis, and when you combine this with style queries, you get 4 way control over an image sprite.
+
+<div class="breakout">
 
 ```css
 @container style(--scroll-block-direction: 1) {
@@ -30,7 +34,9 @@ I'd recommend reading the [single axis explanation](https://www.bram.us/2023/10/
 }
 ```
 
-<div class="feature-fallback sda">
+</div>
+
+<div class="feature-fallback sda breakout">
     <div class="feature">
         <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="VwgazqR" data-user="jbasoo" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
             <span>See the Pen <a href="https://codepen.io/jbasoo/pen/VwgazqR">
@@ -45,7 +51,9 @@ I'd recommend reading the [single axis explanation](https://www.bram.us/2023/10/
     </div>
 </div>
 
-You might notice that diagonal movement is a little rough, however this is solvable. My [reduced experiment](https://codepen.io/jbasoo/pen/NWoNvLx) shows that **it's possible to infer a diagonal directions!** By combining horizontal and vertical detection in [style queries](https://developer.chrome.com/blog/style-queries/), we get 8 detectable directions!
+You might notice that diagonal movement is a little rough, however this is totally fixable. My [reduced experiment](https://codepen.io/jbasoo/pen/NWoNvLx) shows that **it's possible to infer a diagonal directions!** By combining horizontal and vertical detection in [style queries](https://developer.chrome.com/blog/style-queries/), we get 8 detectable directions!
+
+<div class="breakout">
 
 ```css
 @container style(--scroll-block-direction: 1) and style(--scroll-inline-direction: 1) {
@@ -55,9 +63,11 @@ You might notice that diagonal movement is a little rough, however this is solva
 }
 ```
 
+</div>
+
 This then allows us to use an 8 direction character sprite to handle diagonal movement, albeit with slightly janky results.
 
-<div class="feature-fallback sda">
+<div class="feature-fallback sda breakout">
     <div class="feature">
         <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="VwgaJGz" data-user="jbasoo" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
             <span>See the Pen <a href="https://codepen.io/jbasoo/pen/VwgaJGz">

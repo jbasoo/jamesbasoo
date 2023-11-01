@@ -15,7 +15,7 @@
   --grid-overspill: 15%;
   --grid-line-color: var(--c-blue-200);
   --grid-line-thickness: .0625rem;
-  --grid-size: 2.8rem;
+  --grid-size: 2.8125rem;
 
   --c-page-background: var(--c-gray-100);
   --c-text: var(--c-gray-700);

@@ -55,3 +55,16 @@
 		gap: 1ex;
 	}
 }
+
+.breakout {
+	--width: min(100dvw, var(--grid-size) * 20);
+
+	width: var(--width);
+	margin-left: calc((var(--width) - 100%) / -2);
+}
+
+.cp_embed_iframe {
+	height: auto;
+	min-height: 20rem;
+	aspect-ratio: 16 / 9;
+}
