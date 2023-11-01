@@ -1,7 +1,7 @@
 .nav--main ul {
 	list-style: none;
 	width: fit-content;
-	margin: 0 auto 0.1250rem;
+	margin: 0 auto;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
