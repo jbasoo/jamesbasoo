@@ -3,23 +3,23 @@
 
 :root {
   --transition-duration: 0.12s;
-	
-	--mark-size: min(1.5rem, 6dvw);
+
+	--mark-size: min(var(--grid-size) * 0.4, 6dvw);
   --mark-circle-size: calc(var(--mark-size) * 0.666666666);
   --mark-circle-offset: calc(var(--mark-size) / 2 * 0.33333333);
-  
+
   --box-shadow-y-pos: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
   --box-shadow-y-pos--dark: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.4);
   --box-shadow-y-neg: 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
-  
+
   --grid-overspill: 15%;
   --grid-line-color: var(--c-blue-200);
   --grid-line-thickness: .0625rem;
-  --grid-size: 3rem;
+  --grid-size: 2.8rem;
 
   --c-page-background: var(--c-gray-100);
   --c-text: var(--c-gray-700);
-  
+
   --border-radius-500: 0.2rem;
 }
 
@@ -29,7 +29,7 @@
   --grid-line-color: var(--c-yellow-700);
 }
 
-[data-theme="neo"] { 
+[data-theme="neo"] {
   --c-page-background: var(--c-gray-900);
   --c-text: var(--c-gray-100);
   --grid-line-color: var(--c-green-700);

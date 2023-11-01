@@ -6,6 +6,10 @@
 	/* width: min(calc(100% - 2rem), 1200px); */
 	list-style: none;
 
+	[data-page-type="postlist"] & {
+		margin-top: calc(var(--grid-size) / 2);
+	}
+
 	@container (width >= 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -34,12 +38,20 @@
 }
 
 .post-metadata {
+	& time {
+		display: grid;
+		align-items: center;
+		min-height: var(--grid-size);
+	}
+
 	.tags {
 		list-style: none;
 		padding: 0;
-
-		& li {
-			display: inline-block;
-		}
+		margin: 0;
+		min-height: var(--grid-size);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1ex;
 	}
 }

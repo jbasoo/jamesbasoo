@@ -85,6 +85,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1 {
+	line-height: var(--grid-size);
+	margin: 0;
+	transform: translateY(.1em);
+}
+
 code[class*="language-"], pre[class*="language-"] {
 	font-family: var(--font-family--mono);
 	font-variant-ligatures: none;
