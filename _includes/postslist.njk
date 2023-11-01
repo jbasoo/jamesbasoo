@@ -1,18 +1,24 @@
+{% if headingLevel %}
+	{% set titleTag = ['h', headingLevel] | join %}
+{% else %}
+	{% set titleTag = 'h2' %}
+{% endif %}
+
 <ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
-	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %} card">
-		<a href="{{ post.url }}" class="card__layout">
-			<div class="card__header">
-				<div class="card__header-icon">{}</div>
-				<div class="card__header-text">
-					<h3 class="postlist-item__title">{{ post.data.title }}</h3>
+	{% for post in postslist | reverse %}
+		<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %} card">
+			<a href="{{ post.url }}" class="card__layout">
+				<div class="card__header">
+					<div class="card__header-icon">{}</div>
+					<div class="card__header-text">
+						<{{ titleTag }} class="postlist-item__title">{{ post.data.title }}</{{ titleTag }}>
+					</div>
 				</div>
-			</div>
-			<div class="card__body">
-				{% if post.data.description %}<div>{{ post.data.description }}</div>{% endif %}
-				{% if post.date %}<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>{% endif %}
-			</div>
-		</a>
-	</li>
-{% endfor %}
+				<div class="card__body">
+					{% if post.data.description %}<div>{{ post.data.description }}</div>{% endif %}
+					{% if post.date %}<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>{% endif %}
+				</div>
+			</a>
+		</li>
+	{% endfor %}
 </ol>

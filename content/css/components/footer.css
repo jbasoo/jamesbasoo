@@ -1,10 +1,10 @@
 .footer--main {
 	min-height: var(--grid-size);
-	margin-block-start: calc(var(--grid-size) / 2);
+	margin-block: var(--grid-size);
 	display: grid;
 	place-items: center;
 	text-align: center;
-	
+
 	> * {
 		margin: 0;
 		transform: translateY(.1rem);

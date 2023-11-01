@@ -5,22 +5,28 @@
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
 	}
-	
+
+	& li {
+		inline-size: var(--grid-size);
+		block-size: var(--grid-size);
+		display: grid;
+		place-items: center;
+	}
+
 	& a {
 		display: block;
 		transition: all var(--transition-duration);
 	}
-	
+
 	& img {
 		--size: 2rem;
-		
+
 		display: block;
 		object-fit: contain;
 		inline-size: var(--size);
 		block-size: var(--size);
-		
+
 		&[src*="github"], &[src*="codepen"] {
 			[data-theme="neo"] &,
 			[data-theme="holodeck"] & {
