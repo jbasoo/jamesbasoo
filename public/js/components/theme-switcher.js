@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if(themeSwitcher) {
 		themeSwitcher.addEventListener('click', (event) => {
-			document.querySelector('html').dataset.theme = event.target.value;
-			localStorage.setItem('theme', event.target.value);
+			if(event.target.tagName === 'BUTTON') {
+				document.querySelector('html').dataset.theme = event.target.value;
+				localStorage.setItem('theme', event.target.value);
+			}
 		});
 	}
 });
