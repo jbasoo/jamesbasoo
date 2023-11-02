@@ -8,14 +8,14 @@
 	}
 
 	& li {
+		display: block;
+	}
+
+	& a {
 		inline-size: var(--grid-size);
 		block-size: var(--grid-size);
 		display: grid;
 		place-items: center;
-	}
-
-	& a {
-		display: block;
 		transition: all var(--transition-duration);
 	}
 
