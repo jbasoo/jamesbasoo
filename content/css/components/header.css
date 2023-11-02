@@ -1,6 +1,7 @@
 .header--main {
   position: relative;
   padding: 0 1rem;
+  margin-block: calc(var(--grid-size) / 2) var(--grid-size);
 }
 
 .theme-switcher {

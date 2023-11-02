@@ -1,4 +1,11 @@
 <header class="header--main">
+	<div class="theme-switcher">
+		<label for="theme" class="visually-hidden">Theme Switcher</label>
+		<button type="button" name="theme" id="theme-switcher__light" value="light" title="Light">
+		<button type="button" name="theme" id="theme-switcher__holodeck" value="holodeck" title="Holodeck">
+		<button type="button" name="theme" id="theme-switcher__neo" value="neo" title= "Neo">
+	</div>
+
 	{% include 'components/logo.njk' %}
 
 	<nav class="nav--main" aria-label="Main">
@@ -10,11 +17,4 @@
 			{%- endfor %}
 		</ul>
 	</nav>
-
-	<div class="theme-switcher">
-		<label for="theme" class="visually-hidden">Theme Switcher</label>
-		<button type="button" name="theme" id="theme-switcher__light" value="light" title="Light">
-		<button type="button" name="theme" id="theme-switcher__holodeck" value="holodeck" title="Holodeck">
-		<button type="button" name="theme" id="theme-switcher__neo" value="neo" title= "Neo">
-	</div>
 </header>

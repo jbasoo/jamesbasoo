@@ -42,7 +42,7 @@ body {
     --mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
 
     top: 0;
-    background-position: center calc(0% - var(--grid-line-thickness));
+    background-position: center calc(0% - var(--grid-line-thickness) - calc(var(--grid-size) / 2));
   }
 
   &:after {
