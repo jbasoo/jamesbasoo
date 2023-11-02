@@ -20,7 +20,7 @@
 	}
 
 	& img {
-		--size: 2rem;
+		--size: min(1.5rem, var(--grid-size));
 
 		display: block;
 		object-fit: contain;
