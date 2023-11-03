@@ -67,5 +67,6 @@
 .cp_embed_iframe {
 	height: auto;
 	min-height: 20rem;
+	max-height: 80dvh;
 	aspect-ratio: 16 / 9;
 }
