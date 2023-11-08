@@ -10,7 +10,10 @@ eleventyNavigation:
 
 <div class="layout--1col">
 	<main>
-    <h1>Blog</h1>
+		<header class="heading-group">
+			<h1>Blog</h1>
+			<a href="/blog/feed.xml"><img src="/img/icons/feed.svg" alt="Blog Feed" width="256" height="256" loading="lazy"></a>
+		</header>
 
     {% set postslist = collections.posts %}
     {% include "postslist.njk" %}

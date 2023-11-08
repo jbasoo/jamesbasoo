@@ -78,6 +78,21 @@ body {
 	}
 }
 
+.heading-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .5ch;
+	font-size: var(--font-size--h1);
+
+	& img {
+		inline-size: 1em;
+		block-size: 1em;
+		object-fit: contain;
+		padding: .1em;
+	}
+}
+
 .owl {
   > * + * {
     margin-top: 1rem;
