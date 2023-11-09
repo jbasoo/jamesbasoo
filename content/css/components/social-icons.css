@@ -12,15 +12,29 @@
 	}
 
 	& a {
+		--size: min(1.5rem, var(--grid-size));
+
 		inline-size: var(--grid-size);
 		block-size: var(--grid-size);
 		display: grid;
 		place-items: center;
 		transition: all var(--transition-duration);
+		position: relative;
+
+		&:has([src*="linkedin"]) {
+			&:before {
+				content: "";
+				display: block;
+				background-color: white;
+				position: absolute;
+				inset: calc(((var(--grid-size) - var(--size)) / 2) + 0.125rem);
+				z-index: -1;
+				border-radius: 0.125rem;
+			}
+		}
 	}
 
 	& img {
-		--size: min(1.5rem, var(--grid-size));
 
 		display: block;
 		object-fit: contain;

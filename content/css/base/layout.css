@@ -82,14 +82,28 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: .5ch;
 	font-size: var(--font-size--h1);
 
+	& > a {
+		inline-size: 2rem;
+		block-size: var(--grid-size);
+		display: flex;
+		align-items: center;
+		transition: filter var(--transition-duration);
+
+		&:hover {
+			filter: brightness(0.8) contrast(1.5);
+		}
+	}
+
 	& img {
-		inline-size: 1em;
-		block-size: 1em;
+		inline-size: calc(var(--grid-size) / 3);
+		block-size: calc(var(--grid-size) / 3);
 		object-fit: contain;
-		padding: .15em;
+	}
+
+	& h1 {
+		margin: 0;
 	}
 }
 
