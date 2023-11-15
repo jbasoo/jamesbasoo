@@ -101,6 +101,3 @@ Happy coding, you got this!
 [Directional control concept](https://www.bram.us/2023/10/23/css-scroll-detection/#the-concept)
 
 Assets: [1](https://cupnooble.itch.io/sprout-lands-asset-pack) [2](https://axulart.itch.io/small-8-direction-characters)
-
-
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
