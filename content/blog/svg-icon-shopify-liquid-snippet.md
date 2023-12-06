@@ -29,7 +29,7 @@ liquid+="{% endcase %}";
 echo "${liquid}" > $2
 ```
 
-Add the script to a `svg-to-liquid.sh` file and run `svg-to-liquid.sh iconSourcePath icons.liquid` to generate the `icons.liquid` file. Add it to your theme's snippets, then you can output the icon using `{%- render 'icons', icon: 'icon-name' -%}`
+Add the script to a `svg-to-liquid.sh` file and run `svg-to-liquid.sh iconSourcePath icons.liquid` to generate the `icons.liquid` file. Add it to your theme's snippets, then you can output the icon using `{% render 'icons', icon: 'icon-name' %}`
 
 I'm no bash wizard so please go ahead and @ me on [Mastodon](https://mastodon.social/@Jbasoo) if you're nerd-sniped into cleaning it up.
 {% endraw %}
