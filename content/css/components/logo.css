@@ -53,7 +53,7 @@
 	position: relative;
 	top: .1em;
   line-height: 1;
-  font-size: min(calc(var(--mark-size) * 1.8), 10dvw);
+  font-size: min(calc(var(--mark-size) * 1.8), 10cqw);
   font-weight: lighter;
   text-transform: uppercase;
 

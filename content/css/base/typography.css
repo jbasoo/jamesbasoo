@@ -92,8 +92,8 @@ h1 {
 	line-height: var(--grid-size);
 }
 
-h2 { font-size: clamp(1.2rem, 7dvw, 1.5rem); }
-h3 { font-size: clamp(1rem, 7dvw, 1.13rem); }
+h2 { font-size: clamp(1.2rem, 7cqw, 1.5rem); }
+h3 { font-size: clamp(1rem, 7cqw, 1.13rem); }
 h4 { font-size: 1rem; }
 
 code[class*="language-"], pre[class*="language-"] {

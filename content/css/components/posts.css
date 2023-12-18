@@ -57,10 +57,9 @@
 }
 
 .breakout {
-	--width: min(100dvw, var(--grid-size) * 20);
+	--width: min(100cqw, var(--grid-size) * 20);
 
-	width: var(--width);
-	margin-inline-start: calc((var(--width) - 100%) / -2);
+	margin-inline: calc((var(--width) - 100%) / -2);
 	margin-block: 2rem;
 }
 

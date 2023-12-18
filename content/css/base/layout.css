@@ -12,6 +12,7 @@ body {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   overflow-x: hidden;
+	container-type: inline-size;
 
   &:before,
   &:after {
@@ -63,7 +64,7 @@ body {
   gap: 2rem;
   grid-template-columns: minmax(0, 1fr);
   margin-inline: auto;
-  width: min(calc(100dvw - 4rem), calc(var(--grid-size) * 14.222222222222222)); /* 640px */
+  width: min(calc(100cqw - 4rem), calc(var(--grid-size) * 14.222222222222222)); /* 640px */
 }
 
 .layout--2col {
@@ -71,7 +72,7 @@ body {
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-inline: auto;
-  width: min(calc(100dvw - 4rem), $bp_xl);
+  width: min(calc(100cqw - 4rem), $bp_xl);
 
   @media (width >= 1200px) {
     grid-template-columns: 8fr 4fr;
