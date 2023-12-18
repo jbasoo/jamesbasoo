@@ -4,7 +4,7 @@
 :root {
   --transition-duration: 0.12s;
 
-	--mark-size: min(var(--grid-size) * 0.4, 6cqw);
+	--mark-size: min(var(--grid-size) * 0.4, 6vw);
   --mark-circle-size: calc(var(--mark-size) * 0.666666666);
   --mark-circle-offset: calc(var(--mark-size) / 2 * 0.33333333);
 

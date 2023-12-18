@@ -8,7 +8,7 @@
 	--font-size--xl: 1.5rem;
 	--font-size--2xl: 1.75rem;
 	--font-size--3xl: 2rem;
-	--font-size--h1: clamp(1.2rem, 7cqw, 2rem);
+	--font-size--h1: clamp(1.2rem, 7vw, 2rem);
 	--font-family--sans: 'Overpass', sans-serif;
 	--font-family--mono: 'Overpass Mono', monospace;
 }

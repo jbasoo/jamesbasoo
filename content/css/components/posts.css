@@ -10,13 +10,13 @@
 		margin-top: calc(var(--grid-size) / 2);
 	}
 
-	@container (width >= 768px) {
+	/* @container (width >= 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
 	@container (width >= 1200px) {
 		grid-template-columns: repeat(4, 1fr);
-	}
+	} */
 }
 
 .postlist-item__title {
