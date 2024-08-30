@@ -1,7 +1,3 @@
-@view-transition {
-  navigation: auto;
-}
-
 @layer reset, vendor, variables, base, components, utilities, overrides;
 
 @import url('fonts.css') layer(vendor);
