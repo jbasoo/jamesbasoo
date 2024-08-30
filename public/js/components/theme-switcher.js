@@ -1,4 +1,4 @@
-import Cookies from '/js/js.cookie.min.mjs'
+import Cookies from '/js-cookie/js.cookie.min.mjs'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const themeSwitcher = document.querySelector('.theme-switcher');
