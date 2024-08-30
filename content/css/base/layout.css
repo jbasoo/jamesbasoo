@@ -1,7 +1,3 @@
-@view-transition {
-  navigation: auto;
-}
-
 :root {
   accent-color: var(--c-accent);
   overflow-x: hidden;
