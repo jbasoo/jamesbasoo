@@ -1,6 +1,6 @@
 ---
 title: SSR + CSR Theme Switching
-description: The theme switcher was one of the first things I built for my site, and it had one annoying flaw... until now.
+description: The theme switcher was one of the first things I built for my site but it had an annoying flaw.
 date: 2024-08-30
 tags:
     - css
