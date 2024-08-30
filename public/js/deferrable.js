@@ -1,2 +1,3 @@
 // import "./components/carousel.js"
-import "./components/codepen.js"
+import "./components/theme-switcher.js";
+import "./components/codepen.js";
