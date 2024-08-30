@@ -3,6 +3,8 @@ import { HTMLRewriter } from "https://ghuc.cc/worker-tools/html-rewriter/index.t
 
 export default async function handler(request: Request, context: Context) {
 	const theme = context.cookies.get("theme");
+
+	if(!theme) return;
   const response = await context.next();
   const rewriter = new HTMLRewriter()
     .on("html", {
