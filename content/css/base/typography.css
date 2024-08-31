@@ -96,8 +96,15 @@ h2 { font-size: clamp(1.2rem, 7cqw, 1.5rem); }
 h3 { font-size: clamp(1rem, 7cqw, 1.13rem); }
 h4 { font-size: 1rem; }
 
-code[class*="language-"], pre[class*="language-"] {
+code, pre[class*="language-"] {
 	color-scheme: dark;
 	font-family: var(--font-family--mono);
 	font-variant-ligatures: none;
+}
+
+code:not([class], :focus-visible) {
+	border-radius: 0.125em;
+	outline: 0.0625em solid color-mix(in srgb, transparent, currentColor 20%);
+	outline-offset: 0.125em;
+	margin-inline: 0.5ch;
 }
