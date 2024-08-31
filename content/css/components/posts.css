@@ -1,6 +1,6 @@
 .postlist {
 	display: grid;
-	gap: 1rem;
+	gap: 2rem;
 	margin: 0;
 	padding: 0;
 	/* width: min(calc(100% - 2rem), 1200px); */

@@ -8,8 +8,14 @@
   --mark-circle-size: calc(var(--mark-size) * 0.666666666);
   --mark-circle-offset: calc(var(--mark-size) / 2 * 0.33333333);
 
-  --box-shadow-y-pos: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
-  --box-shadow-y-pos--dark: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.4);
+  --box-shadow-y-pos:
+		0 0.1rem 0.1rem hsla(0, 9%, 33%, 0.15),
+		0 0.1rem 1.2rem hsla(0, 9%, 33%, 0.06)
+	;
+  --box-shadow-y-pos--dark:
+		0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.2),
+		0 0.1rem 1.7rem hsla(0, 9%, 33%, 0.08)
+	;
   --box-shadow-y-neg: 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
 
   --grid-line-color: var(--c-blue-200);
