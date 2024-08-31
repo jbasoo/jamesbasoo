@@ -6,7 +6,7 @@ export default async function handler(request: Request, context: Context) {
 	const theme = context.cookies.get("theme");
 	const type = response.headers.get('content-type') as string;
 
-	if(!theme || !type.startsWith('text/html')) return;
+	if(!theme || !type || !type.startsWith('text/html')) return;
 
   const rewriter = new HTMLRewriter().on("html", {
 		element: (element) => {

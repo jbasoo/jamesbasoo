@@ -20,28 +20,7 @@ Managing cookies sucks. The methods for handling `localStorage` are dead easy bu
 I get the user's pereferred color scheme and if there's no theme cookie already set, then I map the user's preferred color to one of my themes, then set the data attribute and cookie. From there, it's just listening to the click event and updating again.
 
 ```javascript
-import Cookies from '/js-cookie/js.cookie.min.mjs'
-
-const themeSwitcher = document.querySelector('.theme-switcher');
-const defaultTheme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'holodeck' : 'light');
-const currentTheme = Cookies.get('theme');
-
-if(!currentTheme) {
-	Cookies.set('theme', defaultTheme);
-	document.documentElement.dataset.theme = defaultTheme;
-}
-else {
-	document.documentElement.dataset.theme = currentTheme;
-}
-
-if(themeSwitcher) {
-	themeSwitcher.addEventListener('click', (event) => {
-		if(event.target.tagName === 'BUTTON') {
-			document.querySelector('html').dataset.theme = event.target.value;
-			Cookies.set('theme', event.target.value);
-		}
-	});
-}
+{% include "../../public/js/components/theme-switcher.js" %}
 ```
 
 ## The Edge Function
@@ -53,38 +32,7 @@ It was only after figuring out 90% of this that I discovered [Jason's post](http
 
 
 ```typescript
-import type { Config } from "@netlify/edge-functions";
-import { HTMLRewriter } from "https://ghuc.cc/worker-tools/html-rewriter/index.ts";
-
-export default async function handler(request: Request, context: Context) {
-  const response = await context.next();
-	const theme = context.cookies.get("theme");
-	const type = response.headers.get('content-type') as string;
-
-	if(!theme || !type.startsWith('text/html')) return;
-
-  const rewriter = new HTMLRewriter().on("html", {
-		element: (element) => {
-			element.setAttribute('data-theme', theme);
-		}
-	});
-
-  return rewriter.transform(response);
-}
-
-export const config: Config = {
-  path: "/*",
-  excludedPath: [
-		"/*.css",
-		"/*.js",
-		"/*.mjs",
-		"/*.svg",
-		"/*.jpg",
-		"/*.woff2",
-		"/*.mp4"
-	]
-}
-
+{% include "../../netlify/edge-functions/theme-switcher.ts" %}
 ```
 ## Future James's problems
 There's still a flash if the user is new and prefers a dark theme, as it defaults to the light theme then switches when it detects the user's preference. Eventually I might get around this by using `light-dark()` and `prefers-color-scheme` but they weren't around when I initially built the site and would require significant re-architecting.
