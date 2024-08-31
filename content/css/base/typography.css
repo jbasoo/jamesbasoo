@@ -97,6 +97,7 @@ h3 { font-size: clamp(1rem, 7cqw, 1.13rem); }
 h4 { font-size: 1rem; }
 
 code[class*="language-"], pre[class*="language-"] {
+	color-scheme: dark;
 	font-family: var(--font-family--mono);
 	font-variant-ligatures: none;
 }
