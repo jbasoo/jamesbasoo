@@ -2,6 +2,14 @@
   accent-color: var(--c-accent);
   overflow-x: hidden;
 	background-color: var(--grid-line-color);
+
+	&[data-theme="holodeck"] {
+		background-color: var(--c-yellow-300);
+	}
+
+	&[data-theme="neo"] {
+		background-color: var(--c-green-300);
+	}
 }
 
 body {
