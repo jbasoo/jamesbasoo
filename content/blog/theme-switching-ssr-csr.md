@@ -92,7 +92,7 @@ There's still a flash if the user is new and prefers a dark theme, as it default
 There is also no "auto" mode, to defer to the user's preference at all times instead of remembering their previous choice.
 
 ## Bonus
-This all came about when I tried adding [cross-document view transitions](https://developer.chrome.com/docs/web-platform/view-transitions#cross-document_view_transitions) and found that the flash was even more jarring than it used to be. I also removed `font-display: swap;` from my `@font-face` declarations which makes the flash of unstyled text briefly invisible instead. It feels smoother, if a touch slower.
+This all came about when I tried adding [cross-document view transitions](https://developer.chrome.com/docs/web-platform/view-transitions#cross-document_view_transitions) and found that the flash was even more jarring than it used to be. I also changed `font-display: swap;` to `block` in my `@font-face` declarations which makes the flash of unstyled text briefly invisible instead. It feels smoother, if a touch slower.
 
 Going further down the rabbit hole, I realised that [the font I use](https://fontsource.org/fonts/overpass) now has a variable variant, so I swapped that out to reduce requests and overall payload size.
 
