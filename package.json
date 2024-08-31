@@ -44,6 +44,7 @@
 		"luxon": "^3.2.1",
 		"markdown-it-anchor": "^8.6.6",
 		"postcss": "^8.4.21",
+		"postcss-easing-gradients": "^3.0.1",
 		"postcss-import": "^15.1.0",
 		"postcss-nesting": "^11.1.0",
 		"postcss-simple-vars": "^7.0.1"

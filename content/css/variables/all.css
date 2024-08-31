@@ -12,7 +12,6 @@
   --box-shadow-y-pos--dark: 0 0.1rem 0.2rem hsla(0, 9%, 33%, 0.4);
   --box-shadow-y-neg: 0 -0.1rem 0.2rem hsla(0, 9%, 33%, 0.2);
 
-  --grid-overspill: 15%;
   --grid-line-color: var(--c-blue-200);
   --grid-line-thickness: .0625rem;
   --grid-size: 2.8125rem;
