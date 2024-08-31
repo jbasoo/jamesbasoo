@@ -87,7 +87,7 @@ export const config: Config = {
 
 ```
 ## Future James's problems
-There's still a flash if the user is new and prefers a dark theme, as it default to a light theme. Eventually I might get around this by using `light-dark()` and `prefers-color-scheme` but they weren't around when I initially built the site and would require significant re-architecting.
+There's still a flash if the user is new and prefers a dark theme, as it defaults to the light theme then switches when it detects the user's preference. Eventually I might get around this by using `light-dark()` and `prefers-color-scheme` but they weren't around when I initially built the site and would require significant re-architecting.
 
 There is also no "auto" mode, to defer to the user's preference at all times instead of remembering their previous choice.
 
