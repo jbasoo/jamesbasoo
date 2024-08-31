@@ -3,12 +3,34 @@
   overflow-x: hidden;
 	background-color: var(--grid-line-color);
 
+	&:after {
+		content: "Oh, hi there!";
+		position: fixed;
+		z-index: -1;
+		display: block;
+		padding: 0.2rem;
+		top: 0;
+		left: 50%;
+		translate: -50% 0;
+		color: var(--c-blue-300);
+		font-weight: lighter;
+		text-transform: uppercase;
+	}
+
 	&[data-theme="holodeck"] {
 		background-color: var(--c-yellow-300);
+
+		&:after {
+			color: var(--c-yellow-700);
+		}
 	}
 
 	&[data-theme="neo"] {
 		background-color: var(--c-green-300);
+
+		&:after {
+			color: var(--c-green-700);
+		}
 	}
 }
 

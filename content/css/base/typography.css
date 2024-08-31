@@ -1,4 +1,4 @@
-body {
+:root {
 	font-family: var(--font-family--sans);
 	color: var(--c-text);
 	text-wrap: pretty;
