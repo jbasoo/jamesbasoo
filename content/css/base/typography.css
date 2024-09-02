@@ -3,7 +3,7 @@
 	color: var(--c-text);
 	text-wrap: pretty;
 
-	[data-theme="neo"] & {
+	&[data-theme="neo"] {
 		font-family: var(--font-family--mono);
 		font-variant-ligatures: none;
 	}
