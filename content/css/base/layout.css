@@ -4,7 +4,7 @@
 	background-color: var(--grid-line-color);
 
 	&:after {
-		content: "Oh, hi there!";
+		content: "Hello there!";
 		position: fixed;
 		z-index: -1;
 		display: block;
