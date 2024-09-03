@@ -22,6 +22,8 @@
   --grid-line-thickness: .0625rem;
   --grid-size: 2.8125rem;
 
+	--gap: 24px;
+
   --c-page-background: var(--c-gray-100);
   --c-text: var(--c-gray-700);
 

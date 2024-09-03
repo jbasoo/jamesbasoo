@@ -91,18 +91,18 @@ body {
 
 .layout--1col {
   display: grid;
-  gap: 2rem;
+  gap: var(--gap);
   grid-template-columns: minmax(0, 1fr);
   margin-inline: auto;
-  width: min(calc(100cqw - 4rem), calc(var(--grid-size) * 14.222222222222222)); /* 640px */
+  width: min(calc(100cqw - calc(2 * var(--gap))), calc(var(--grid-size) * 14.222222222222222)); /* 640px */
 }
 
 .layout--2col {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: var(--gap);
   margin-inline: auto;
-  width: min(calc(100cqw - 4rem), $bp_xl);
+  width: min(calc(100cqw - calc(2 * var(--gap))), $bp_xl);
 
   @media (width >= 1200px) {
     grid-template-columns: 8fr 4fr;

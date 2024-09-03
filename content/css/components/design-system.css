@@ -1,7 +1,7 @@
 [data-page-type="design-system"] {
 	& main {
 		margin-inline: auto;
-		width: min(calc(100cqw - 4rem), $bp_xl);
+		width: min(calc(100cqw - calc(2 * var(--gap))), $bp_xl);
 	}
 
 	& section {

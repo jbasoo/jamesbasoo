@@ -1,6 +1,6 @@
 .postlist {
 	display: grid;
-	gap: 2rem;
+	gap: var(--gap);
 	margin: 0;
 	padding: 0;
 	/* width: min(calc(100% - 2rem), 1200px); */
@@ -60,7 +60,7 @@
 	--width: min(100cqw, var(--grid-size) * 20);
 
 	margin-inline: calc((var(--width) - 100%) / -2);
-	margin-block: 2rem;
+	margin-block: var(--gap);
 }
 
 .cp_embed_iframe {
