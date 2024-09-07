@@ -6,7 +6,6 @@
 	&:after {
 		content: "Hello there!";
 		position: fixed;
-		z-index: -1;
 		display: block;
 		padding: 0.2rem;
 		top: 0;
