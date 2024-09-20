@@ -38,3 +38,4 @@ Frameworks have also run a similar course. These incredibly powerful tools have 
 ## References
 https://www.w3.org/People/howcome/p/cascade.html // https://dev.to/tomhodgins/reflections-on-the-first-css-stylesheet-33c
 https://mxb.dev/blog/buildless/
+https://front-end.social/@kizu/113172389997366942
