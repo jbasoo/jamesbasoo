@@ -39,6 +39,6 @@ Frameworks have also run a similar course. These incredibly powerful tools have 
 https://www.w3.org/People/howcome/p/cascade.html // https://dev.to/tomhodgins/reflections-on-the-first-css-stylesheet-33c
 https://mxb.dev/blog/buildless/
 https://front-end.social/@kizu/113172389997366942
-"As Cory said, “Frameworks are a testbed for new ideas that may or may not work out.”."
 https://lea.verou.me/blog/2024/wcs-vs-frameworks/
 https://www.abeautifulsite.net/posts/web-components-are-not-the-future-they-re-the-present/
+"Frameworks are a testbed for new ideas that may or may not work out. We all need to be OK with that. Even framework authors. Especially framework authors. More importantly, we all need to stop being salty when our way isn’t what makes it into the browser."
