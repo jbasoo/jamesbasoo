@@ -69,16 +69,16 @@
 	* { margin: 0; }
 
 	* + * {
-		margin-top: 0.2rem;
+		margin-top: 4px;
 	}
 }
 
 .card__body {
-	padding: 1.2rem;
+	padding: 16px;
 
 	* { margin: 0; }
 
 	* + * {
-		margin-top: 0.5rem;
+		margin-top: 8px;
 	}
 }

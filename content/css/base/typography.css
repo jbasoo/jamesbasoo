@@ -1,9 +1,9 @@
-body {
+:root {
 	font-family: var(--font-family--sans);
 	color: var(--c-text);
 	text-wrap: pretty;
 
-	[data-theme="neo"] & {
+	&[data-theme="neo"] {
 		font-family: var(--font-family--mono);
 		font-variant-ligatures: none;
 	}
@@ -86,17 +86,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	margin: 0;
+	margin-block-start: 0;
 	transform: translateY(.1em);
 	font-size: var(--font-size--h1);
 	line-height: var(--grid-size);
 }
 
-h2 { font-size: clamp(1.2rem, 7dvw, 1.5rem); }
-h3 { font-size: clamp(1rem, 7dvw, 1.13rem); }
+h2 { font-size: clamp(1.2rem, 7cqw, 1.5rem); }
+h3 { font-size: clamp(1rem, 7cqw, 1.13rem); }
 h4 { font-size: 1rem; }
 
-code[class*="language-"], pre[class*="language-"] {
+code, pre[class*="language-"] {
+	color-scheme: dark;
 	font-family: var(--font-family--mono);
 	font-variant-ligatures: none;
+}
+
+code:not([class], :focus-visible) {
+	border-radius: 0.125em;
+	outline: 0.0625em solid color-mix(in srgb, transparent, currentColor 20%);
+	outline-offset: 0.125em;
+	margin-inline: 0.5ch;
 }

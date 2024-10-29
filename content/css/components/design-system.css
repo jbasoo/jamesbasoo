@@ -1,24 +1,24 @@
 [data-page-type="design-system"] {
 	& main {
 		margin-inline: auto;
-		width: min(calc(100dvw - 4rem), $bp_xl);
+		width: min(calc(100cqw - calc(2 * var(--gap))), $bp_xl);
 	}
-	
+
 	& section {
 		padding-block: 1rem;
 	}
-	
+
 	& .colors {
 		width: 100%;
 		border-collapse: collapse;
 		table-layout: fixed;
-		
+
 		& th,
 		& td {
 			padding: 0;
 		}
 	}
-	
+
 	& .variant-name,
 	& .family-name {
 		& div {
@@ -29,7 +29,7 @@
 			padding: 0.2rem;
 		}
 	}
-	
+
 	& .color {
 		&:before {
 			content: "";

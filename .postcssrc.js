@@ -6,6 +6,7 @@ module.exports = {
 		'postcss-simple-vars': {variables: breakpoints},
 		'postcss-nesting': {},
 		'autoprefixer': {},
-		'cssnano': {}
+		'cssnano': {},
+		'postcss-easing-gradients': {}
 	}
 }

@@ -1,28 +1,61 @@
 :root {
   accent-color: var(--c-accent);
   overflow-x: hidden;
+	background-color: var(--grid-line-color);
+
+	&:after {
+		content: "Hello there!";
+		position: fixed;
+		display: block;
+		padding: 0.2rem;
+		top: 0;
+		left: 50%;
+		translate: -50% -100%;
+		color: var(--c-blue-300);
+		font-weight: lighter;
+		text-transform: uppercase;
+	}
+
+	&[data-theme="holodeck"] {
+		background-color: var(--c-yellow-300);
+
+		&:after {
+			color: var(--c-yellow-700);
+		}
+	}
+
+	&[data-theme="neo"] {
+		background-color: var(--c-green-300);
+
+		&:after {
+			color: var(--c-green-700);
+		}
+	}
 }
 
 body {
-  background-color: var(--c-page-background);
   position: relative;
   transition: color var(--transition-duration), background-color var(--transition-duration);
+	background-color: var(--c-page-background);
   will-change: color, background-color;
   line-height: 1.75;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   overflow-x: hidden;
+	container-type: inline-size;
 
   &:before,
   &:after {
+		--mask: radial-gradient(ellipse at center var(--mask-y-start), black, cubic-bezier(0.7, 1, 0.7, 1), transparent);
+
     content: "";
     position: absolute;
     overflow: hidden;
     pointer-events: none;
     will-change: background-image;
     z-index: -1;
-    left: calc(var(--grid-overspill) * -1);
-    right: calc(var(--grid-overspill) * -1);
+    left: 0;
+    right: 0;
     height: min(50dvh, var(--grid-size) * 10);
     background-image:
       linear-gradient(var(--grid-line-color) var(--grid-line-thickness), transparent var(--grid-line-thickness)),
@@ -33,21 +66,18 @@ body {
       var(--grid-size) var(--grid-size)
     ;
 
-    -webkit-mask-image: var(--mask);
     mask-image: var(--mask);
   }
 
   &:before {
-    /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
-    --mask: radial-gradient(ellipse at center top, black 0, transparent 70%);
+		--mask-y-start: top;
 
     top: 0;
     background-position: center calc(0% - var(--grid-line-thickness) - calc(var(--grid-size) / 2));
   }
 
   &:after {
-    /* @TODO: find solution for safari not supporting "at" syntax in radial gradients */
-    --mask: radial-gradient(ellipse at center bottom, black 0, transparent 70%);
+		--mask-y-start: bottom;
 
     bottom: 0;
     background-position: center calc(100% + var(--grid-line-thickness));
@@ -60,18 +90,18 @@ body {
 
 .layout--1col {
   display: grid;
-  gap: 2rem;
+  gap: var(--gap);
   grid-template-columns: minmax(0, 1fr);
   margin-inline: auto;
-  width: min(calc(100dvw - 4rem), calc(var(--grid-size) * 14.222222222222222)); /* 640px */
+  width: min(calc(100cqw - calc(2 * var(--gap))), calc(var(--grid-size) * 14.222222222222222)); /* 640px */
 }
 
 .layout--2col {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: var(--gap);
   margin-inline: auto;
-  width: min(calc(100dvw - 4rem), $bp_xl);
+  width: min(calc(100cqw - calc(2 * var(--gap))), $bp_xl);
 
   @media (width >= 1200px) {
     grid-template-columns: 8fr 4fr;
@@ -115,6 +145,7 @@ body {
 
 video {
   width: 100%;
+	aspect-ratio: 16/9;
 }
 
 hr {

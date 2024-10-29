@@ -6,7 +6,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const pluginPostCss = require("eleventy-plugin-postcss");
+const pluginPostCss = require("@jgarber/eleventy-plugin-postcss");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
@@ -15,7 +15,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({
 		"./public/": "/",
 		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
-		"./node_modules/@fontsource": "/fonts/fontsource"
+		"./node_modules/@fontsource-variable": "/fonts/fontsource-variable",
+		"./node_modules/js-cookie/dist": "/js-cookie"
 	});
 
 	// Run Eleventy when these files change:

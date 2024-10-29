@@ -1,0 +1,3 @@
+[submodule "public/visual-viewport"]
+	path = public/visual-viewport
+	url = https://github.com/jbasoo/visual-viewport.git

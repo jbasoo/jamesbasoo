@@ -1,6 +1,6 @@
 .postlist {
 	display: grid;
-	gap: 1rem;
+	gap: var(--gap);
 	margin: 0;
 	padding: 0;
 	/* width: min(calc(100% - 2rem), 1200px); */
@@ -10,13 +10,13 @@
 		margin-top: calc(var(--grid-size) / 2);
 	}
 
-	@container (width >= 768px) {
+	/* @container (width >= 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
 	@container (width >= 1200px) {
 		grid-template-columns: repeat(4, 1fr);
-	}
+	} */
 }
 
 .postlist-item__title {
@@ -57,11 +57,10 @@
 }
 
 .breakout {
-	--width: min(100dvw, var(--grid-size) * 20);
+	--width: min(100cqw, var(--grid-size) * 20);
 
-	width: var(--width);
-	margin-inline-start: calc((var(--width) - 100%) / -2);
-	margin-block: 2rem;
+	margin-inline: calc((var(--width) - 100%) / -2);
+	margin-block: var(--gap);
 }
 
 .cp_embed_iframe {
