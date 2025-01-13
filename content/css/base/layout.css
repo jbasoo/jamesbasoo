@@ -43,6 +43,7 @@ body {
   grid-template-rows: max-content 1fr max-content;
   overflow-x: hidden;
 	container-type: inline-size;
+	isolation: isolate;
 
   &:before,
   &:after {
