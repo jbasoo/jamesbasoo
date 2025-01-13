@@ -34,25 +34,6 @@ a {
 	}
 }
 
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-s::before {
-  content: " [start of stricken text] ";
-}
-
-s::after {
-  content: " [end of stricken text] ";
-}
-
 .highlight-mask {
 	--c-1: var(--c-blue-400);
 	--c-2: var(--c-green-500);
