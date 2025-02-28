@@ -108,3 +108,10 @@ code:not([class], :focus-visible) {
 	outline-offset: 0.125em;
 	margin-inline: 0.5ch;
 }
+
+blockquote {
+	margin-inline: 0.5em;
+	padding-inline: 1em;
+	border-inline-start: 2px solid color-mix(in srgb, currentColor 15%, transparent);
+	font-style: italic;
+}
