@@ -84,21 +84,29 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.5;
 
 	&:not(:first-child) {
-		margin-block-start: 1.5em;
-		margin-block-end: .5em;
+		margin-block: 1em;
+	}
+
+	.subtitle {
+		display: block;
+		font-weight: lighter;
+		font-style: italic;
+		font-size: 0.8em;
 	}
 }
 
 h1 {
 	margin-block-start: 0;
 	transform: translateY(.1em);
-	font-size: var(--font-size--h1);
 	line-height: var(--grid-size);
+	font-size: var(--step-5);
 }
 
-h2 { font-size: clamp(1.2rem, 7cqw, 1.5rem); }
-h3 { font-size: clamp(1rem, 7cqw, 1.13rem); }
-h4 { font-size: 1rem; }
+h2 { font-size: var(--step-4); }
+h3 { font-size: var(--step-3); }
+h4 { font-size: var(--step-2); }
+h5 { font-size: var(--step-1); }
+h6 { font-size: var(--step-0); }
 
 code, pre[class*="language-"] {
 	color-scheme: dark;

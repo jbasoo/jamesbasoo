@@ -103,11 +103,16 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   margin-inline: auto;
-  width: min(calc(100cqw - calc(2 * var(--gap))), var(--max-width));
+  width: min(calc(100cqw - calc(2 * var(--space-m-l))), var(--max-width));
+
+	> aside > h2:first-child {
+		line-height: var(--grid-size);
+		margin-top: 0 calc(var(--grid-size) / 4);
+	}
 
   @media (width >= $bp_lg) {
 		--max-width: $bp_lg;
-		gap: var(--gap);
+		gap: var(--space-m-l);
     grid-template-columns: 7fr 5fr;
 	}
 }
