@@ -1,14 +1,25 @@
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1240,18,1.125,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
 :root {
-	--font-size--3xs: 0.5rem;
-	--font-size--2xs: 0.625rem;
-	--font-size--xs: 0.75rem;
-	--font-size--sm: 0.875rem;
-	--font-size--md: 1rem;
-	--font-size--lg: 1.125rem;
-	--font-size--xl: 1.5rem;
-	--font-size--2xl: 1.75rem;
-	--font-size--3xl: 2rem;
-	--font-size--h1: clamp(1.2rem, 7vw, 2rem);
+  --step--2: clamp(0.7901rem, 0.7558rem + 0.1718vw, 0.8889rem);
+  --step--1: clamp(0.8889rem, 0.8502rem + 0.1932vw, 1rem);
+  --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+  --step-1: clamp(1.125rem, 1.0761rem + 0.2446vw, 1.2656rem);
+  --step-2: clamp(1.2656rem, 1.2106rem + 0.2751vw, 1.4238rem);
+  --step-3: clamp(1.4238rem, 1.3619rem + 0.3095vw, 1.6018rem);
+  --step-4: clamp(1.6018rem, 1.5322rem + 0.3482vw, 1.802rem);
+  --step-5: clamp(1.802rem, 1.7237rem + 0.3917vw, 2.0273rem);
+}
+
+:root {
+	--font-size--xs: var(--step--2);
+	--font-size--sm: var(--step--1);
+	--font-size--md: var(--step-0);
+	--font-size--lg: var(--step-1);
+	--font-size--xl: var(--step-2);
+	--font-size--2xl: var(--step-3);
+	--font-size--3xl: var(--step-4);
+	--font-size--h1: var(--step-5);
 	--font-family--sans: 'Overpass', sans-serif;
 	--font-family--mono: 'Overpass Mono', monospace;
 }

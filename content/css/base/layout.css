@@ -98,14 +98,17 @@ body {
 }
 
 .layout--2col {
+	--max-width: $bp_sm;
+
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--gap);
   margin-inline: auto;
-  width: min(calc(100cqw - calc(2 * var(--gap))), $bp_xl);
+  width: min(calc(100cqw - calc(2 * var(--gap))), var(--max-width));
 
   @media (width >= 1200px) {
-    grid-template-columns: 8fr 4fr;
+		--max-width: $bp_lg;
+		gap: var(--gap);
+    grid-template-columns: 7fr 5fr;
 	}
 }
 
