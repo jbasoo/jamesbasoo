@@ -112,7 +112,7 @@ body {
 
 		> aside > h2:first-child {
 			line-height: var(--grid-size);
-			margin-top: 0 calc(var(--grid-size) / 4);
+			margin-top: 0;
 		}
 	}
 }
