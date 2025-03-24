@@ -105,7 +105,7 @@ body {
   margin-inline: auto;
   width: min(calc(100cqw - calc(2 * var(--gap))), var(--max-width));
 
-  @media (width >= 1200px) {
+  @media (width >= $bp_lg) {
 		--max-width: $bp_lg;
 		gap: var(--gap);
     grid-template-columns: 7fr 5fr;
