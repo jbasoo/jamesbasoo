@@ -1,0 +1,19 @@
+header, footer {
+	display: none;
+}
+
+:root::after {
+	display: none;
+}
+
+body {
+	padding-block: calc(var(--grid-size) / 2);
+
+	&::before, &::after {
+		display: none;
+	}
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
