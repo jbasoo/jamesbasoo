@@ -30,16 +30,18 @@
   --border-radius-500: 0.2rem;
 }
 
-[data-theme="holodeck"] {
-  --c-page-background: var(--c-gray-900);
-  --c-text: var(--c-gray-100);
-  --grid-line-color: var(--c-yellow-700);
-}
+@media screen {
+	[data-theme="holodeck"] {
+		--c-page-background: var(--c-gray-900);
+		--c-text: var(--c-gray-100);
+		--grid-line-color: var(--c-yellow-700);
+	}
 
-[data-theme="neo"] {
-  --c-page-background: var(--c-gray-900);
-  --c-text: var(--c-gray-100);
-  --grid-line-color: var(--c-green-700);
+	[data-theme="neo"] {
+		--c-page-background: var(--c-gray-900);
+		--c-text: var(--c-gray-100);
+		--grid-line-color: var(--c-green-700);
+	}
 }
 
 /* @link https://utopia.fyi/space/calculator?c=320,16,1.125,1240,18,1.125,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */

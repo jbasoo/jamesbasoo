@@ -21,19 +21,21 @@ a {
 		color: var(--c-blue-500);
 	}
 
-	[data-theme="holodeck"] & {
-		color: var(--c-yellow-300);
+	@media screen {
+		[data-theme="holodeck"] & {
+			color: var(--c-yellow-300);
 
-		&:hover {
-			color: var(--c-yellow-500);
+			&:hover {
+				color: var(--c-yellow-500);
+			}
 		}
-	}
 
-	[data-theme="neo"] & {
-		color: var(--c-green-300);
+		[data-theme="neo"] & {
+			color: var(--c-green-300);
 
-		&:hover {
-			color: var(--c-green-500);
+			&:hover {
+				color: var(--c-green-500);
+			}
 		}
 	}
 }
@@ -46,15 +48,17 @@ a {
   color: transparent;
   background-image: linear-gradient(to bottom right, var(--c-1), var(--c-2));
 
-	[data-theme="neo"] & {
-		--c-1: var(--c-green-600);
-		--c-2: var(--c-green-400);
-  }
+	@media screen {
+		[data-theme="neo"] & {
+			--c-1: var(--c-green-600);
+			--c-2: var(--c-green-400);
+		}
 
-  [data-theme="holodeck"] & {
-		--c-1: var(--c-yellow-600);
-		--c-2: var(--c-yellow-400);
-  }
+		[data-theme="holodeck"] & {
+			--c-1: var(--c-yellow-600);
+			--c-2: var(--c-yellow-400);
+		}
+	}
 }
 
 .highlight { /* change to emphasis */

@@ -18,7 +18,7 @@
   --c-red-700: hsl(357, 88%, 30%);
   --c-red-800: hsl(357, 82%, 20%);
   --c-red-900: hsl(357, 73%, 10%);
-  
+
   --c-yellow-100: hsl(60, 100%, 97%);
   --c-yellow-200: hsl(55, 97%, 90%);
   --c-yellow-300: hsl(50, 97%, 70%);
@@ -28,7 +28,7 @@
   --c-yellow-700: hsl(40, 90%, 30%);
   --c-yellow-800: hsl(35, 83%, 20%);
   --c-yellow-900: hsl(35, 77%, 9%);
-    
+
   --c-green-100: hsl(136, 100%, 97%);
   --c-green-200: hsl(136, 100%, 90%);
   --c-green-300: hsl(136, 100%, 76%);
@@ -48,7 +48,7 @@
   --c-blue-700: hsl(204, 88%, 30%);
   --c-blue-800: hsl(208, 86%, 20%);
   --c-blue-900: hsl(212, 84%, 7%);
-  
+
   /* --c-brown-100: hsl(40, 20%, 96%);
   --c-brown-200: hsl(40, 14%, 90%);
   --c-brown-300: hsl(40, 15%, 74%);
@@ -61,16 +61,18 @@
   --c-accent-light: var(--c-blue-200);
   --c-accent: var(--c-blue-300);
   --c-accent-dark: var(--c-blue-400);
-  
-  &[data-theme="holodeck"] {
-    --c-accent-light: var(--c-yellow-200);
-    --c-accent: var(--c-yellow-300);
-    --c-accent-dark: var(--c-yellow-400);
-  }
-  
-  &[data-theme="neo"] {
-    --c-accent-light: var(--c-green-200);
-    --c-accent: var(--c-green-300);
-    --c-accent-dark: var(--c-green-400);
-  }
+
+	@media screen {
+		&[data-theme="holodeck"] {
+			--c-accent-light: var(--c-yellow-200);
+			--c-accent: var(--c-yellow-300);
+			--c-accent-dark: var(--c-yellow-400);
+		}
+
+		&[data-theme="neo"] {
+			--c-accent-light: var(--c-green-200);
+			--c-accent: var(--c-green-300);
+			--c-accent-dark: var(--c-green-400);
+		}
+	}
 }
