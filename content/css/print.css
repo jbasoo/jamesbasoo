@@ -17,3 +17,7 @@ body {
 ::-webkit-scrollbar {
 	display: none;
 }
+
+:is(main, aside) * {
+	break-inside: avoid;
+}
