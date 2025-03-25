@@ -49,7 +49,7 @@ input, button, textarea, select {
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, li {
   overflow-wrap: break-word;
 }
 /*

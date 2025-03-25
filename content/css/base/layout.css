@@ -101,14 +101,14 @@ body {
 	--max-width: $bp_sm;
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   margin-inline: auto;
   width: min(calc(100cqw - calc(2 * var(--space-m-l))), var(--max-width));
 
   @media (width >= $bp_lg) {
 		--max-width: $bp_lg;
 		gap: var(--space-m-l);
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
 
 		> aside > h2:first-child {
 			line-height: var(--grid-size);

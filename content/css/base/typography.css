@@ -86,10 +86,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	text-wrap: balance;
 	line-height: 1.5;
-
-	&:not(:first-child) {
-		margin-block: 1em;
-	}
+	margin-block: 1em .5em;
 
 	.subtitle {
 		display: block;
