@@ -105,7 +105,7 @@ body {
   margin-inline: auto;
   width: min(calc(100cqw - calc(2 * var(--space-m-l))), var(--max-width));
 
-  @media (width >= $bp_lg) {
+  @media screen and (width >= $bp_lg) {
 		--max-width: $bp_lg;
 		gap: var(--space-m-l);
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
