@@ -8,7 +8,7 @@ tags:
 ---
 
 <div class="breakout guttered">
-	<img src="/img/road-block-speed-bumps.jpg" alt="An amateurish illustration of a road with multiple paths. One has speed bumps, the other has a roadblock that would divert the person following the path down another road in the opposite direction." width="2634" height="1757" class="hero sketchy-border">
+	<img src="/img/roadblock-speed-bumps/md.jpg" sizes="auto" srcset="/img/roadblock-speed-bumps/hi.jpg 2634w, /img/roadblock-speed-bumps/md.jpg 1200w, /img/roadblock-speed-bumps/lo.jpg 800w" alt="An amateurish illustration of a road with multiple paths. One has speed bumps, the other has a roadblock that would divert the person following the path down another road in the opposite direction." width="2634" height="1757" class="hero sketchy-border">
 </div>
 
 Coding standards are generally a good thing. They get everyone on the same page which reduces ambiguity and headaches down the line. However, despite outlining standards in internal docs and project readmes, they aren't always followed. Even enforcing them in IDEs can be hit or miss, especially if you're cobbling together disparate technologies and need to be more flexible.
