@@ -54,7 +54,7 @@ You've been successfully slowed down and steered towards reading the documentati
 
 This did eventually led to us having a discussion and agreeing upon a handful of core plugins that we'd be likely to enable on most projects. I would've preferred to have less plugins enabled by default, but considering Tailwind doesn't (usually) output anything unless it finds a matching class in your codebase, I'd call it a step in the right direction.
 
-## Tailwind V4 - Influencing CSS Strategy
+## Tailwind V4 - Influencing CSS Strategy?
 
 A lot has changed with [version 4](https://tailwindcss.com/blog/tailwindcss-v4), it's finally getting some modern features like OKLCH colors, @property, cascade layers, and color-mix(). The configuration has also been moved out of JS and into the main CSS file, which has some pros and cons.
 
