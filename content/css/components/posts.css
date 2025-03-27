@@ -57,10 +57,15 @@
 }
 
 .breakout {
-	--width: min(100cqw, var(--grid-size) * 20);
+	--gutter: 0px;
+	--width: min(100cqw - var(--gutter), var(--grid-size) * 20);
 
 	margin-inline: calc((var(--width) - 100%) / -2);
 	margin-block: var(--gap);
+
+	&.guttered {
+		--gutter: calc(var(--gap) * 2);
+	}
 }
 
 .cp_embed_iframe {

@@ -167,3 +167,29 @@ hr {
   max-width: 100%;
   overflow-x: scroll;
 }
+
+img.hero {
+	width: 100%;
+	height: auto;
+}
+
+.sketchy-border {
+	filter: url(#filter-squiggle);
+	border: 0.3rem solid var(--c-gray-900);
+	border-radius: 0.5rem;
+
+	[data-theme="holodeck"] &,
+	[data-theme="neo"] &  {
+		border-color: white;
+	}
+
+	[data-theme="neo"] & {
+		border-color: var(--c-gray-100);
+	}
+}
+
+.links-nextprev {
+	padding: 0;
+	list-style-type: "";
+	font-weight: bold;
+}

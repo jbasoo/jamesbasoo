@@ -1,0 +1,23 @@
+{# https://danieldarrenjones.com/articles/how-to-make-rough-edges-with-css-and-svgs #}
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    height="0"
+    width="0"
+>
+    <defs>
+        <filter id="filter-squiggle">
+            <feTurbulence
+                type="fractalNoise"
+                id="turbulence"
+                baseFrequency=".1"
+                numOctaves="3"
+            />
+            <feDisplacementMap
+                id="displacement"
+                in="SourceGraphic"
+                scale="3"
+            />
+        </filter>
+    </defs>
+</svg>
