@@ -1,6 +1,6 @@
 ---
 title: How To Write CSS And Influence People
-description: I design project architecture to shape my team's coding strategy; I think Tailwind does the same thing to its users.
+description: I build my team's coding stategy into our codebase architecture to shape how we work. I think Tailwind is also doing the same thing to its users.
 image: img/roadblock-speed-bumps/lo.jpg
 date: 2025-03-27
 tags:
