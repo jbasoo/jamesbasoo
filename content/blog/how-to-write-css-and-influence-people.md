@@ -1,6 +1,6 @@
 ---
 title: How To Write CSS And Influence People
-description: I design my codebase architecture to influence how my team codes; I think Tailwind does the same thing to its users.
+description: I design project architecture to shape my team's coding strategy; I think Tailwind does the same thing to its users.
 image: img/roadblock-speed-bumps/lo.jpg
 date: 2025-03-27
 tags:
@@ -32,13 +32,14 @@ Our team has varying views on Tailwind — some are indifferent, some are pro, a
 
 CSS can do so much more than Tailwind abstracts, and only learning the abstraction means that you don't gain a good understanding of what is being abstracted. This is something I found out the hard way when I learned jQuery before learning vanilla JavaScript. jQuery provided a sensible API to aid in writing cross-browser compatible JavaScript, but that had the downside of having to learn how JavaScript actually worked once jQuery became redundant. Tailwind does have some patterns that could remain useful. However, like many frameworks and libraries before it, it'll eventually be surpassed by the web platform.
 
-## Ethical Influencing - Roadblocks VS Speed Bumps
+## Flexible Strategies - Roadblocks VS Speed Bumps
 
-The whole idea of influencing people "gives me the ick" (as the kids say these days). I don't like being tricked into things, and being forced down a certain path is incredibly demoralising. That being said, I find informed guidance to be generally acceptable, desirable even. However, becoming informed sometimes requires you to slow down and consider the information.
+The whole idea of influencing people "gives me the ick" (as the kids say these days). I don't like being tricked into things, and being forced down a certain path is incredibly demoralising. That being said, I find an informed strategy to be generally acceptable, desirable even. However, becoming informed sometimes requires you to slow down and consider the information.
 
 I've started to view this as the difference between **roadblocks** and **speed bumps**. The former diverts you away from your destination and the latter prevents you from going too fast in potentially hazardous environments. It's an idea we can apply to our architecture when we want to encourage adherence to coding standards but still allow going off-script if it's truly necessary.
 
 A roadblock is very frustrating. It requires you to find a different route to your destination or prevents you from getting there at all. It may keep you out of danger though, so they certainly have their place, but when something is more of a coding style or preference, I would prefer to be slowed down rather than diverted.
+
 ## Guiding My Team's Coding Standards
 
 It was decided that Tailwind should be available on some of our projects. While I personally find the odd utility class useful, the mere existence of such a prominent tool on a project can encourage its over-use if the team does not have strictly enforced coding standards. As a "fast-paced agency" that utilises a wide range of stacks, we don't exactly have the discipline to keep this kind of tech debt in check.
